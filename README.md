@@ -20,4 +20,4 @@
 
 ---
 
-[rismo.fr](https://rismo.fr)
+[![rismo.fr](./ressourcesMD/rismo.webp)](https://rismo.fr)

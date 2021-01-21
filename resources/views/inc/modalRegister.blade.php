@@ -26,7 +26,7 @@
                             </div>
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">tag_faces</i>
-                                <input id="fonction" type="text" class="form-control @error('fonction') is-invalid @enderror" name="fonction" value="{{ old('fonction') }}" required autocomplete="fonction" autofocus>
+                                <input id="fonction" type="text" class="form-control @error('fonction') is-invalid @enderror" name="fonction" value="{{ old('fonction') }}"autocomplete="fonction" autofocus>
                                 <label for="fonction">Entrez votre fonction</label>
                                 @error('fonction')
                                     <span class="invalid-feedback" role="alert">

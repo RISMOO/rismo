@@ -262,12 +262,7 @@
 
                     <div class="col s12 m6 right-align ">
                         <h4 class="">Dernier post</h4>
-                        <div class="fb-post" data-href="https://www.facebook.com/rismo.fr/posts/101702201920711" data-width="380" data-show-text="true"><blockquote cite="https://www.facebook.com/rismo.fr/posts/101702201920711" class="fb-xfbml-parse-ignore"><p>Bonjour a tous ,
-
-                            Vous aussi vous vous êtes reconvertis dans le monde du web ?
-
-                            Vous suivez ou avez suivi une formation...</p>Publiée par <a href="https://www.facebook.com/rismo.fr/">Quoi de neuf chez rismo ?</a> sur&nbsp;<a href="https://www.facebook.com/rismo.fr/posts/101702201920711">Lundi 18 janvier 2021</a></blockquote></div>
-                            <!--FIN FACEBOOK-->
+                        <div class="fb-post" data-href="https://www.facebook.com/rismo.fr/posts/103712981719633" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/rismo.fr/posts/103712981719633" class="fb-xfbml-parse-ignore">Publiée par <a href="https://www.facebook.com/rismo.fr/">Quoi de neuf chez rismo ?</a> sur&nbsp;<a href="https://www.facebook.com/rismo.fr/posts/103712981719633">Mercredi 20 janvier 2021</a></blockquote></div>
                     </div>
                 </div>
                     <div class="col s8 offset-2 m12 center-align">

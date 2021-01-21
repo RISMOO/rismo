@@ -35,7 +35,7 @@
 
                     <div class="input-field col s12 center-align"><br>
 
-                        {!! Form::button("<i class='material-icons left'>send</i> Envoyer ",['class'=>'btn waves-effect waves z-depth-2 darken-1','value'=>'Envoyer','id'=>'sendMessageButton','type'=>'submit'])!!}
+                        {!! Form::button("<i class='material-icons left'>send</i> Editer votre message ",['class'=>'btn waves-effect waves z-depth-2 darken-1','value'=>'Envoyer','id'=>'sendMessageButton','type'=>'submit'])!!}
                     </div>
 
                     </div>

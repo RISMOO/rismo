@@ -69,17 +69,20 @@
 
             @yield('content')
             @include('inc.errorsuccess')
+            @include('inc.modalSendMessage')
+            @include('inc.modalEdit')
+
             <!---scripts-->
             @include('inc.scripts')
-            @yield('javascripts')
+
             @include('inc.modalApropos')
 
             @include('inc.modalPassword')
             @include('inc.modalRegister')
             @include('inc.modalLogin')
-            @include('inc.modalEdit')
+           
 
-            @include('inc.modalSendMessage')
+            @yield('javascripts')
 
 
         </main>

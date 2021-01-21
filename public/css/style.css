@@ -569,17 +569,18 @@ h4.message {
     margin-top: 5%;
 }
 
-.moiprofil {
-    min-width: 105px;
-    min-height: 105px;
-    max-width: 105px;
-    max-height: 105px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.507), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-top: -2%;
-    margin-left: 1%;
-    transition: 0.3s;
-    filter: blur(4px);
+#moi {
+    -webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;/*DEPART ET FIN LENTE */
+	transition: .3s ease-in-out;
 }
+
+#moi:hover {
+    -webkit-filter: blur(0);
+	filter: blur(0);
+}
+
 
 .para {
     font-size: 1.2rem;

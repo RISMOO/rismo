@@ -183,14 +183,14 @@ echo $pieces[1]; // piece2
         $validator = Validator::make($request->all(), [
             /*nom'=>'alpha|between:3,20|required',*/
             /* 'email'=>'email|required',*/
-            'message' => 'between:3,255|alpha|required',
+            'message' => 'between:3,255|required',
 
 
 
         ]);
 
         if ($validator->fails()) {
-            return redirect('/#contact')
+            return redirect('/home')
                 ->withErrors($validator)
                 ->withInput();
         }
@@ -224,10 +224,10 @@ echo $pieces[1]; // piece2
       //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
         if ($message->published == true) {
 
-            return redirect('/')->with('message',"Votre message a bien été envoyé et sera publié apres approbation");
+            return redirect('/')->with('message',"Votre message a bien été modifié et sera publié apres approbation");
         } else {
 
-            return redirect('/')->with('message', " Votre message a bien été envoyé et ne sera pas publié ");
+            return redirect('/')->with('message', " Votre message a bien été modifié et ne sera pas publié ");
         }
     }
 
