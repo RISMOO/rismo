@@ -1,7 +1,7 @@
 <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content center-align">
         <img src="{{ asset('img/moi.webp') }}" class="z-depth-5 circle responsive-img"id="moi" width="100"
-            alt="">
+            alt="logo" loading="lazy">
         <hr class="first">
         <h4>A PROPOS DE MOI</h4>
         <p class="para">

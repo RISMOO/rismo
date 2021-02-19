@@ -3,46 +3,89 @@
     <nav class="nav">
         <!--le nav responsive fonctionnera avec jquery-->
         <div class="nav-wrapper">
+            @if(Route::current()->uri()== '/')
             <a href="/" class="brand-logo pulse waves-effect waves-light"> <img src="{{ asset('img/logo.jpg') }}"
-                    class="z-depth-2 circle responsive-img image" alt="Contact Person" id="logo2">
+                    class="z-depth-2 circle responsive-img image" alt="Contact Person" id="logo2" loading="lazy">
             </a>
+            @else
+            @if(Route::current()->uri()== 'blog')
+
+            <a href="/blog" class="brand-logo pulse waves-effect waves-light"> <img src="{{ asset('img/virage.png') }}"
+                class=" circle responsive-img image" alt="Contact Person" id="logo5"loading="lazy">
+        </a>
+        @endif
+        @endif
+
 
             <a href="#" data-activates="mobile-menu" data-target="responsive-menu" class="button-collapse">
                 <!--le data doit corresponde a lid  du side-nav-->
                 <i class="material-icons">menu</i>
             </a>
+
             <ul class="right hide-on-med-and-down">
+
                 <!--navigation a droite et on la cache pour les petits ecrans-->
-                <li><a href="/#facebook" class="pulse waves-effect waves-light"><i
-                    class="large material-icons">forum</a></i></li>
+
+                <li><a href="/blog" class="pulse waves-effect waves-light"><i
+                    class="large material-icons">language</a></i></li>
+
+
+
+
+
+                    <li><a href="/#projet" class="pulse waves-effect waves-light"><i
+                        class="large material-icons">phonelink</a></i></li>
+
+
+                <li><a href="/#portfolio" class="pulse waves-effect waves-light"><i
+                    class="large material-icons">school</a></i></li>
+
+
+                    <li><a href="/#titre" class="pulse waves-effect waves-light"><i
+                        class="large material-icons">style</a></i></li>
+
+
+
            <!--CONTACT-->
                 <li><a href="/#messages" class="pulse waves-effect waves-light"><i
                             class="large material-icons">message</a></i></li>
-                <li><a href="/#projet" class="pulse waves-effect waves-light"><i
-                            class="large material-icons">phonelink</a></i></li>
 
                 @auth
                     <li><a href="#modalSend" class="pulse waves-effect waves-light"><i
                                 class="large material-icons">edit</a></i></li>
                 @endauth
 
-                <li><a href="/#portfolio" class="pulse waves-effect waves-light"><i
-                            class="large material-icons">school</a></i></li>
-                <li><a href="/#titre" class="pulse waves-effect waves-light"><i
-                            class="large material-icons">style</a></i></li>
+
                    <!--CONTACT-->
 
                    <li><a href="/#contact" class="pulse waves-effect waves-light"><i
                     class="large material-icons">contact_mail</a></i></li>
 
+                    <li><a href="/#facebook" class="pulse waves-effect waves-light"><i
+                        class="large material-icons">forum</a></i></li>
                 <!-- Authentication Links -->
+
+
+
                 @guest
+                @if(Route::current()->uri()== '/')
+
                     <li><a href="#modalLogin" class="pulse waves-effect waves-light modal-trigger "><i
                                 class="large material-icons deep-orange-text">person</a></i></li>
+                                @else
+                                <li><a href="#modalLogin" class="pulse waves-effect waves-light modal-trigger "><i
+                                    class="large material-icons log">person</a></i></li>
+                                    @endif
+
                     @if (Route::has('register'))
+                    @if(Route::current()->uri()== '/')
 
                         <li><a href="#modalRegister" class="pulse waves-effect waves-light modal-trigger  "><i
                                     class="large material-icons deep-orange-text">input</i></a></li>
+                                    @else
+                                    <li><a href="#modalRegister" class="pulse waves-effect waves-light modal-trigger  "><i
+                                        class="large material-icons log">input</i></a></li>
+@endif
                     @endif
 
                 @else

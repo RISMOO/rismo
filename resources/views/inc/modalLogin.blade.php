@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="center-align">
                     <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img ac"
-                        alt="Contact Person" id="logo1">
+                        alt="Contact Person" id="logo1" loading="lazy">
                 </div>
                 <h4 class="center-align">
                     S'identifier</h4>

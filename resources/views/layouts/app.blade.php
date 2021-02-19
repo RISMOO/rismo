@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Mon Site Laravel" />
-    <meta name="author" content="rismo.fr" />
+    <meta name="author" content="rismo" />
 
    <meta property="og:url" content="https://rismo.fr" />
   <meta property="og:type"  content="website" />
-  <meta property="og:title"  content="Mon" />
-  <meta property="og:description"  content="Mon site en Laravel" />
-  <meta property="og:image"  content="https://rismo.fr/images/monSite.png" />
+  <meta property="og:title"  content="Mon site vitrine" />
+  <meta property="og:description"  content="Mon site vitrine" />
+  <meta property="og:image"  content="https://rismo.fr/img/laravel.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/moi.webp') }}" />
     <!--Import Google Icon Font-->
@@ -53,6 +53,20 @@
 
   <!--FACEBOOK  -->
 
+<!-- Load Facebook SDK for JavaScript -->
+
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+  attribution=setup_tool
+  page_id="101082678649330"
+theme_color="#20cef5"
+logged_in_greeting="Bonjour, Quoi de neuf aujourd'hui?"
+logged_out_greeting="Bonjour, Quoi de neuf aujourd'hui?">
+</div>
+
+
+
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!--Let browser know website is optimized for mobile-->
@@ -80,7 +94,7 @@
             @include('inc.modalPassword')
             @include('inc.modalRegister')
             @include('inc.modalLogin')
-           
+
 
             @yield('javascripts')
 

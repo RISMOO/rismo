@@ -29,6 +29,13 @@ $(document).ready(function ($) {
         $('#face').hide();
 
     });
+
+    /*
+    $('a').click(function(){
+        // Change l'image
+        $('#logo1, #logo3, #logo4, #logo, #logo6').attr("src", "img/Virage.png");
+    });
+*/
     $('#psw').on('click', () => {
         $('#modalLogin').hide();
 
@@ -70,6 +77,17 @@ $(document).ready(function ($) {
         $('select').material_select();
     });
     $('.dropdown-button').dropdown();
+
+
+    $('.materialboxed').materialbox({
+        inDuration:275,
+        outDuration:200,
+        onOpenStart: function() {console.log("onOpenStart");},
+        onOpenEnd: function() {console.log("onOpenEnd");},
+        onCloseStart: function() {console.log("onCloseStart");},
+        onCloseEnd: function() {console.log("onCloseEnd");}
+    });
+
 
 
 
@@ -152,8 +170,5 @@ window.fbAsyncInit = function() {
     version          : 'v9.0'
   });
 };
-
-
-
 
 

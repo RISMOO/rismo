@@ -11,7 +11,7 @@
                 </h2>
                 <a class="z-depth modal-trigger tooltipped"
                     data-position="bottom" data-delay="50" data-tooltip="A propos de moi" id="face" href="#modal1"> <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
-                    id="logo3">
+                    id="logo3" loading="lazy">
                       </a>
                 <!--MODAL APROPOS-->
                 </p>
@@ -31,7 +31,13 @@
         </div>
     @endif
     <section class="white center-align darken-4 section scrollspy" id="projet">
+
         <div class="container">
+            <div class="text-center">
+                <div class="center-align marg">
+                    <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
+                        id="logo1"loading="lazy">
+                </div>
             <h2 class="center-align">Projets</h2>
             <div class="carousel ">
                 @foreach ($projets as $projet)
@@ -39,7 +45,8 @@
                             class="pulse waves-effect waves-light responsive-img z-depth-5 darken-4 materialboxed carrusel "
                             id="img1" data-caption="{{ $projet->description }}" data-delay="50"><a target="_blank"
                             href="{{ $projet->lien }}"><i
-                                class="small material-icons btn-floating pulse z-depth-5 darken-4 ">play_circle_outline</i></a>
+                                class="small material-icons btn-floating pulse z-depth-5 darken-4 tooltipped"
+                                data-position="bottom" data-delay="50" data-tooltip="Découvrir le site" >play_circle_outline</i></a>
                     </div>
                 @endforeach
 
@@ -48,13 +55,17 @@
     <section class="parallax-container z-depth-5 darken-4">
 
         <div class="parallax">
-            <img src="{{ asset('img/martin.jpg ') }}" alt="deux">
+            <img src="{{ asset('img/martin.jpg ') }}" alt="deux" loading="lazy">
         </div>
     </section>
     <section class="competences z-depth-5 darken-4 scrollspy" id="portfolio">
 
         <div class="container">
-
+            <div class="text-center">
+                <div class="center-align marg">
+                    <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
+                        id="logo1"loading="lazy">
+                </div>
             <h2 class="center-align dark-text port ">Portfolio</h2>
             <div class="row">
                 <div class="col s12 m4">
@@ -112,6 +123,11 @@
     <!---SECTION---->
     <section class="formation z-depth-5 darken-4 scrollspy" id="titre">
         <div class="container">
+            <div class="text-center">
+                <div class="center-align marg">
+                    <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
+                        id="logo1"loading="lazy">
+                </div>
             <h2 class="center-align titre">Titres</h2>
             <div class="row">
                 @foreach ($titres as $titre)
@@ -145,7 +161,7 @@
             <div class="text-center">
             <div class="center-align marg">
                 <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
-                    id="logo1">
+                    id="logo1"loading="lazy">
             </div>
             <h2 class="center-align">Vos messages</h2>
             <p class="center-align">Ici vous trouverez vos messages publiés
@@ -156,7 +172,7 @@
                         <img src="{{ asset('img/moi.webp') }}"
                             class="z-depth-5 circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100"
-                            alt="Contact Person" id="prof1">
+                            alt="Contact Person" id="prof1"loading="lazy">
                         <h4>Rismo</h4>
                         <p class="text-muted">Developpeur Web Junior</p>
                         <hr class="second">
@@ -181,7 +197,7 @@
                         <img src="{{ asset('img/avt1.jpg') }}"
                             class="z-depth-5 circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100"
-                            alt="Contact Person" id="prof2">
+                            alt="Contact Person" id="prof2"loading="lazy">
                         <h4>Thierry</h4>
                         <p class="text-muted">Integrateur Web</p>
                         <hr class="second">
@@ -207,7 +223,7 @@
                         <img src="{{ asset('img/avt2.jpg') }}"
                             class="z-depth-5 circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100"
-                            alt="Contact Person" id="prof3">
+                            alt="Contact Person" id="prof3"loading="lazy">
                         <h4>Mickael</h4>
                         <p class="text-muted">Web Designer Junior</p>
                         <hr class="second">
@@ -236,7 +252,7 @@
     <section class="parallax-container z-depth-4 darken-4 ">
 
         <div class="parallax">
-            <img src="{{ asset('img/lap1.jpg') }}" alt="deux">
+            <img src="{{ asset('img/lap1.jpg') }}" alt="deux"loading="lazy">
         </div>
     </section>
 <!--RESEAUX SOCIAUX-->
@@ -246,11 +262,12 @@
     <div class="container">
         <div class="row">
             <div class="center-align marg">
-                <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
-                    id="logo1">
+                <img src="{{ asset('img/ms2.jpg') }}" class="circle responsive-img " alt="Contact Person"
+                    id="logo1"loading="lazy">
             </div>
             <div class="col m10 offset-m1 s12">
-                <h2 class="center-align">Quoi de neuf chez rismo ? </h2>
+                <h2 class="center-align">Reseau social </h2>
+                <h5 class="center-align">Création, gestion et animation d'une page facebook</h5>
 
 
                 <div class="row">
@@ -274,6 +291,10 @@
                     data-show-faces="true">
                     </div>
 
+
+
+
+
                     <!--FIN FACEBOOK-->
                 </div>
             </div>
@@ -286,7 +307,7 @@
             <div class="row">
                 <div class="center-align marg">
                     <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img " alt="Contact Person"
-                        id="logo1">
+                        id="logo1"loading="lazy">
                 </div>
                 <div class="col m10 offset-m1 s12">
                     <h2 class="center-align">Contact </h2>
@@ -371,7 +392,7 @@
 
                 <div class="col s12 footer-copyright center-align">
                     <a href="https://rismo.fr" class="orange-text center-align"><img src="{{ asset('img/logo.jpg') }}"
-                            id="log" class="circle white" width="60" alt="Contact Person"></a><br>
+                            id="log" class="circle white" width="60" alt="Contact Person"loading="lazy"></a><br>
                     &copy;2021 &nbsp;
                 </div>
             </div>
@@ -383,23 +404,23 @@
             <ul>
                 <li><a class="btn-floating" href="https://rismo.fr"><img src="{{ asset('img/moi.webp') }}"
                             class="responsive-img tooltipped" alt="Contact Person" data-position="left"
-                            data-tooltip="rismo.fr, vous y etes déja "></a></li>
+                            data-tooltip="rismo.fr, vous y etes déja "loading="lazy"></a></li>
                 <li><a class="btn-floating z-depth-3 darken-4 " href="https://github.com/RISMOO/RISMOO"><img
                             src="{{ asset('img/GitHub.png') }}" class="responsive-img tooltipped" alt="Contact Person"
-                            data-position="left" data-tooltip="Découvrez mon git hub"></a></li>
+                            data-position="left" data-tooltip="Découvrez mon git hub"loading="lazy"></a></li>
                 <li><a class="btn-floating z-depth-3 darken-4" href="img/cv_maurice.pdf"
                         download="{{ asset('img/cv_maurice.pdf') }}"><i class="material-icons tooltipped"
                             data-position="left" data-tooltip="Télécharger le cv">file_download</i></a></li>
                 <li><a class="btn-floating z-depth-3 darken-4 " href="https://www.facebook.com/rismooo"><img
                             src="{{ asset('img/Facebook.png') }}" class="responsive-img tooltipped" alt="Contact Person"
-                            data-position="left" data-tooltip="Suivez-moi sur facebook"></a></li>
+                            data-position="left" data-tooltip="Suivez-moi sur facebook" loading="lazy"></a></li>
                 <li><a class="btn-floating z-depth-3 darken-4 " href="https://www.linkedin.com/in/m-s-91700619b"><img
                             src="{{ asset('img/Linkedin.png') }}" class="responsive-img tooltipped" alt="Contact Person"
-                            data-position="left" data-tooltip="Suivez-moi sur linkedin"></a></li>
+                            data-position="left" data-tooltip="Suivez-moi sur linkedin"loading="lazy"></a></li>
 
                 <li><a class="btn-floating z-depth-3 darken-4 " href="mailto:maurice.sider29@gmail.com"><img
                             src="{{ asset('img/mail.webp') }}" class="responsive-img tooltipped" alt="Contact Person"
-                            data-position="left" data-tooltip="Ecrivez-moi"></a></li>
+                            data-position="left" data-tooltip="Ecrivez-moi"loading="lazy"></a></li>
             </ul>
         </div>
         </div>

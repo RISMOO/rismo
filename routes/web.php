@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //CONTACT
- 
+
     Route::get('contact','ContactController@create');
     Route::post('contact','ContactController@store');
 
@@ -37,5 +37,9 @@ use Illuminate\Support\Facades\Route;
 Route::group(['prefix' => 'momo'], function () {
     Voyager::routes();
 });
+
+
+//BLOG
+Route::get('/blog', 'BlogController@index')->name('blog');
 
 

@@ -59,10 +59,27 @@ class ProjetnsTableSeeder extends Seeder
             'description'=>'Application Mobile / PROJET REALISE AVEC LE FRAMEWORK HYBRIDE IONIC ET FIREBASE',
             'lien'=>''
         ]);
-       ;
+
         App\Projet::create([
             'image' => 'img/monsite.webp',
             'description'=>'monSite/ PROJET REALISE EN LARAVEL ET MATERIALIZE',
+            'lien'=>''
+        ]);
+        App\Projet::create([
+            'image' => 'img/compteur.webp',
+            'description'=>'Compte a rebours/Réalisé en Javascript',
+            'lien'=>'http://rismo.fr/apps/MonCompteaRebours/'
+        ]);
+
+        App\Projet::create([
+            'image' => 'img/immo.webp',
+            'description'=>'Single page réalisé en avec le framework js Angular et deployé sur Firebase',
+            'lien'=>'https://agenceimmobilere-508d2.web.app/home'
+        ]);
+
+        App\Projet::create([
+            'image' => 'img/todo.webp',
+            'description'=>'Todolist réalisé avec Laravel et VueJs',
             'lien'=>''
         ]);
 

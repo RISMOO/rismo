@@ -8,14 +8,14 @@
                     <div class="center-align">
                     <p>
                     <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img dashboard"
-                        alt="Contact Person" id="logo1">
+                        alt="Contact Person" id="logo1"loading="lazy">
                     </p>
 
                    <h5>
                     Bonjour <span class="userAuth flow-text"> {{ ucfirst(Auth::user()->name) }}</span></h5>
                    <p> Bienvenue dans sur votre tableau de bord<br></p>
 
-                   
+
 
                     @if (count($messages) >= 1)
                         Vous avez écrits &nbsp;<strong
