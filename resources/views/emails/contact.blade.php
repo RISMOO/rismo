@@ -1,15 +1,15 @@
 @component('mail::message')
-# Bonjour
+    # Bonjour
 
-Vous avez recu un mail de la part: {{$data['name']}} ({{$data['email']}})
+    Vous avez recu un mail de la part: {{ $data['name'] }} ({{ $data['email'] }})
 
-Message :
-{{$data['message']}}
+    Message :
+    {{ $data['message'] }}
 
-@component('mail::button', ['url' => ''])
-Button Text
-@endcomponent
+    @component('mail::button', ['url' => ''])
+        Button Text
+    @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+    Thanks,<br>
+    {{ config('app.name') }}
 @endcomponent

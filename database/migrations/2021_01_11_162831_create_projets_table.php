@@ -17,7 +17,7 @@ class CreateProjetsTable extends Migration
             $table->increments('id');
             $table->string('image');
             $table->string('description');
-            $table->string('lien');
+            $table->string('lien')->nullable;
             $table->timestamps();
         });
     }

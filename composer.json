@@ -16,6 +16,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^2.5",
         "laravelcollective/html": "^6.2",
+        "spatie/laravel-cookie-consent": "^2.12",
         "tcg/voyager": "^1.4"
     },
     "require-dev": {

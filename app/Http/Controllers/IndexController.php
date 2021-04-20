@@ -122,10 +122,10 @@ echo $pieces[1]; // piece2
       //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
         if ($message->published == true) {
 
-            return redirect('/')->with('message',"Votre message a bien été envoyé et sera publié apres approbation");
+            return redirect('/home')->with('message',"Votre message a bien été envoyé et sera publié apres approbation");
         } else {
 
-            return redirect('/')->with('message', " Votre message a bien été envoyé et ne sera pas publié ");
+            return redirect('/home')->with('message', " Votre message a bien été envoyé et ne sera pas publié ");
         }
     }
 
@@ -159,7 +159,7 @@ echo $pieces[1]; // piece2
         if(auth()->user()->id !== $message->user_id){
           return redirect('/')->with('error','Non autorisé');
         }
-        return view ('/')->with('message', $message);
+        return view ('/home')->with('message', $message);
     }
 
     /**
@@ -224,10 +224,10 @@ echo $pieces[1]; // piece2
       //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
         if ($message->published == true) {
 
-            return redirect('/')->with('message',"Votre message a bien été modifié et sera publié apres approbation");
+            return redirect('/home')->with('message',"Votre message a bien été modifié et sera publié apres approbation");
         } else {
 
-            return redirect('/')->with('message', " Votre message a bien été modifié et ne sera pas publié ");
+            return redirect('/home')->with('message', " Votre message a bien été modifié et ne sera pas publié ");
         }
     }
 

@@ -1,52 +1,78 @@
 @extends('layouts.app')
 
 @section('content')
+@include('inc.errorsuccess')
+@if (session()->has('message'))
+    <div class="card-content1 center-align" role="alert">
 
+        {{ session()->get('message') }}
+    </div>
+@endif
         <div class="container">
             <div class="row">
-                <div class="col s12 ">
-                    <div class="center-align">
-                    <p>
-                    <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img dashboard"
-                        alt="Contact Person" id="logo1"loading="lazy">
-                    </p>
+                <div class="col s12">
+                    <div class="card center-align cardHome">
+                        <div class="card-content">
+                      <h5 class="white-text">
+                    Bonjour <span class="userAuth flow-text white-text"> {{ ucfirst(Auth::user()->name) }}</span></h5>
+                   <p class="white-text"> Bienvenue dans sur votre tableau de bord<br></p>
+                   @if (count($messages) >= 1)
+                  <p class="white-text"> Vous avez écrits &nbsp;<strong
+                       class="text-primary">{{ count($messages) }}</strong>&nbsp;&nbsp;message{{ count($messages) > 1 ? 's' : '' }}&nbsp;<br></p>
+                       <a class="btn waves-effect waves-light btn-small" href="#modalSendMessage">
+                        Ecrire un message</a>
+               @else
+                     <p class="white-text">  Nous sommes le:<span class=""> {{ $date }}</span></p>
+                      <p  class="white-text"> Vous n'avez aucuns messages.</p><br>
+                       <a class="btn waves-effect waves-light btn-small" href="#modalSendMessage">
+                        Ecrire un message</a>
 
-                   <h5>
-                    Bonjour <span class="userAuth flow-text"> {{ ucfirst(Auth::user()->name) }}</span></h5>
-                   <p> Bienvenue dans sur votre tableau de bord<br></p>
+                       <br><br>
+               @endif
+                   <p class="white-text">Vous pouvez changer le theme ou la couleur de votre tableau de bord.</p>
+                   <h6 class="couleur white-text">Couleurs</h6>
+                   <a class="btn-floating  waves-effect waves-light bleu"onclick = "changeColor('#0694fe');"><i class="material-icons bleu">add</i></a>
+                   <a class="btn-floating  waves-effect waves-light white"onclick = "changeColor('white');"><i class="material-icons white">add</i></a>
+                   <a class="btn-floating  waves-effect waves-light green"onclick = "changeColor('green');"><i class="material-icons green">add</i></a>
+                   <h6 class="couleur white-text">Themes</h6>
+                   <!--
+                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage();">Montagne</a>
+                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage2();">Nature</a>
+                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage3();">Ville</a>
+                   -->
+                     <div class="check">
+                   <div class="switch">
+                    <label>
+                      <input type="checkbox"id="check1">
+                      <span class="lever " id="lever"></span>
+                    <span class="white-text">  MONTAGNE</span>
+                    </label>
+                  </div>
+                  <div class="switch">
+                    <label>
 
+                      <input type="checkbox"id="check2">
+                      <span class="lever"></span>
+                      <span class="white-text"> NATURE</span>
+                    </label>
+                  </div>
+                  <div class="switch">
+                    <label>
 
-
-                    @if (count($messages) >= 1)
-                        Vous avez écrits &nbsp;<strong
-                            class="text-primary">{{ count($messages) }}</strong>&nbsp;&nbsp;message{{ count($messages) > 1 ? 's' : '' }}&nbsp;<br>
-
-                    @else
-
-                          <p>  Nous sommes le:<span class="orange-text"> {{ $date }}</span></p>
-
-
-
-
-                       <p> Vous n'avez aucuns messages.</p><br>
-                        <a class="waves-effect waves-light btn" href="#modalSend"
-                        ><i
-                             class="material-icons left">edit</i>Ecrire un message</a>
-
-
-
-                <br>
-                    @endif
-                </h5>
+                      <input type="checkbox"id="check3">
+                      <span class="lever"></span>
+                      <span class="white-text">VILLE</span>
+                    </label>
+                  </div>
+                    </div>
+                          </h5>
                         </div>
                     </div>
                 </div>
-                @if (count($messages) >= 1)
-                    <div class="col s12 m4 ">
-                        Nous sommes le: {{ $date }}<br>
-                @endif
-                @if (!count($messages) == 0)
 
+
+                <div class="col s12">
+                @if (!count($messages) == 0)
 
                     <table class="striped">
                         <thead>
@@ -56,7 +82,7 @@
                                 <th>Supprimer</th>
                             </tr>
                         </thead>
-                        <tbody>
+                         <tbody>
                             <tr>
                                 @foreach ($messages as $message)
                                     <td>{{ $message->message }}<br>
@@ -65,30 +91,29 @@
 
                                     </td>
                                     <td>
-                                        <a class="waves-effect waves-light btn" href="#modalEdit{{ $message->id }}"
-                                           ><i
-                                                class="material-icons left">edit</i>Editer</a>
+                                        <a class="btn waves-effect waves-light btn-small" href="#modalEdit{{ $message->id }}"
+                                           >EDITER
+                                            </a>
                                     </td>
                                     <td>
                                         {!! Form::open(['action' => ['IndexController@destroy', $message->id], 'method' =>
                                         'POST']) !!}
                                         {{ Form::hidden('_method', 'DELETE') }}
                                         {{ Form::button(
-                                                '<i
-                                            class="material-icons left">delete</i> Supprimer',
+                                               'Supprimer',
                                                 ['class' => 'btn btn-danger', 'type' => 'submit']
                                             ) }}
                                         {!! Form::close() !!}
                                     </td>
-                            </tr>
-
-                  @endforeach
-                @endif
-                </tbody>
-                </table>
-            </div>
-          </div>
+                                 </tr>
+                            @endforeach
+                            @endif
+                      </tbody>
+                    </table>
                 </div>
+
             </div>
         </div>
-    @endsection
+
+
+                           @endsection

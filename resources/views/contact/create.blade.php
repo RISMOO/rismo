@@ -74,8 +74,6 @@
         </div>
     </div>
 </div>
-
-
 @endsection
 <!---
 php art

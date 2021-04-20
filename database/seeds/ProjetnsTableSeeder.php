@@ -29,13 +29,9 @@ class ProjetnsTableSeeder extends Seeder
             'lien'=>'https://rismo.fr/apps/laFleur'
         ]);
 
+
         App\Projet::create([
-            'image' => 'img/monsite1.webp',
-            'description'=>'Site V2 / PROJET REALISE EN LARAVEL',
-            'lien'=>'https://rismo.fr/apps/MonSiteFirst'
-        ]);
-        App\Projet::create([
-            'image' => 'img/movies.webp',
+            'image' => 'img/movies.png',
             'description'=>'Movies / PROJET REALISE EN VUE_JS',
             'lien'=>'https://my-app-movies.netlify.app'
         ]);
@@ -80,7 +76,7 @@ class ProjetnsTableSeeder extends Seeder
         App\Projet::create([
             'image' => 'img/todo.webp',
             'description'=>'Todolist réalisé avec Laravel et VueJs',
-            'lien'=>''
+            'lien'=>'htt'
         ]);
 
     }
