@@ -17,7 +17,7 @@ header('Location:./');
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Mon Portfolio" />
     <meta property="og:description"
-        content="Vous étes ici sur : mon portfolio, mes projets, mes formations et pas que.. " />
+        content="Bienvenue sur mon portfolio, mes projets, mes formations et pas que.. " />
     <meta property="og:image" content="https://rismo.fr/img/reu.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/sale.png') }}" />
@@ -75,7 +75,7 @@ header('Location:./');
 
 
 
-    <body onload="window.location.href = '#openModal';"id="open">
+    <body id="open">
         <div id="openModal" class="modalDialog text-center shadow">
           <div class="center-align">
          <a href="/">
@@ -87,7 +87,7 @@ header('Location:./');
             <hr />
 
 
-            <a href="#close" class="btn btn-danger clos shadow">DECOUVRIR</a>
+            <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
           </div>
         </div>
 

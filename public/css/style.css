@@ -911,15 +911,14 @@ nav .nav-wrapper {
     top: 0;
 }
 
-.modal {
-    /* background-image: url("/img/shaise.jpg");*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #ffffff00;
- transition-property: opacity, left;
- transition-duration: 2s, 3s, 2s, 1s;
+table.centered
+{
+
+    background-color: #fcfcfc71;
 
 }
+
+
 .send1 {
     background-image: url("/img/sendmessage.svg");
     background-repeat: no-repeat;
@@ -1357,6 +1356,14 @@ h5.bonjour {
         opacity: 1;
         pointer-events: auto;
       }
+      table.centered, .btn
+      {
+
+
+          font-size: 11px;
+
+      }
+
       .modalDialog > div {
 
         margin-top: 10%;
@@ -1663,6 +1670,9 @@ div.card-content1 {
     color: #000;
 }
 
+
+
+
 span.userAuth {
     color: #ee0251;
     font-size: 1.5rem;
@@ -1692,7 +1702,7 @@ h4.message {
     color: #ee0251;
     margin-top: 5%;
 }
- div#modalLogin
+ #modalLogin
  {
 
     background-color: rgba(0, 0, 0, 0.082);

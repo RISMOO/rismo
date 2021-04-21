@@ -10,7 +10,7 @@
 
                     <div class="input-field col s12">
 
-                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <input id="name" type="text" class="form-control white-text @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         <label for="name">Entrez votre Nom <span class="red-text">*</span></label>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="input-field col s12">
 
-                        <input id="fonction" type="text" class="form-control @error('fonction') is-invalid @enderror" name="fonction" value="{{ old('fonction') }}"autocomplete="fonction" autofocus>
+                        <input id="fonction" type="text" class="form-control white-text @error('fonction') is-invalid @enderror" name="fonction" value="{{ old('fonction') }}"autocomplete="fonction" autofocus>
                         <label for="fonction">Entrez votre fonction</label>
                         @error('fonction')
                             <span class="invalid-feedback" role="alert">
@@ -32,7 +32,7 @@
                     <div class="input-field col s12">
 
                         <input id="email" type="email"
-                            class="form-control validate  @error('email') is-invalid @enderror" name="email"
+                            class="form-control validate white-text  @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
                         <label for="email">Entrez votre email <span class="red-text">*</span></label>
                         @error('email')
@@ -44,7 +44,7 @@
                     <div class="input-field col s12">
 
                         <input id="password" type="password"
-                            class="form-control validate @error('password') is-invalid @enderror" name="password"
+                            class="form-control white-text validate @error('password') is-invalid @enderror" name="password"
                             required autocomplete="current-password">
                         @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -55,7 +55,7 @@
                     </div>
                     <div class="input-field col s12">
 
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                        <input id="password-confirm" type="password" class="form-control white-text" name="password_confirmation" required autocomplete="new-password">
                         <label for="password">Confirmer le mot de passe<span class="red-text">*</span> </label>
                     </div>
 

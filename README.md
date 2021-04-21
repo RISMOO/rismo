@@ -1,14 +1,13 @@
-## Site vitrine 
+## Mon portfolio
 
 ### Ce site  sert de support pour presenter mes projets, portfolio, formations et pas que 
  
----
 
 ## Frameworks utilisés
 * Laravel/Php  ( BACKEND ) 
 
 [![laravel](./ressourcesMD/laravel.png)](https://laravel.com/)
-* Materialize  ( FRONTEND )
+* Materialize, javascript, jquery  ( FRONTEND )
 
 [![laravel](./ressourcesMD/materialize1.png)](https://materializecss.com/)
 
@@ -20,4 +19,4 @@
 
 ---
 ## Demo
-[![rismo.fr](./ressourcesMD/rismo.webp)](https://rismo.fr)
+[![rismo.fr](https://rismo.fr/img/portfolio.webp)](https://rismo.fr)

@@ -17,8 +17,6 @@ class IndexController extends Controller
 
     public function __construct()
     {
-
-
     }
 
 
@@ -37,7 +35,7 @@ class IndexController extends Controller
         $formations = Formation::all();
         $projets = Projet::all();
         $titres = Titre::all();
-        $messages=Message::all();
+        $messages = Message::all();
 
 
         return view('welcome')->with([
@@ -46,7 +44,7 @@ class IndexController extends Controller
             'formations' => $formations,
             'projets' => $projets,
             'titres' => $titres,
-            'messages'=>$messages
+            'messages' => $messages
         ]);
     }
 
@@ -119,10 +117,10 @@ echo $pieces[1]; // piece2
 
 
 
-      //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
+        //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
         if ($message->published == true) {
 
-            return redirect('/home')->with('message',"Votre message a bien été envoyé et sera publié apres approbation");
+            return redirect('/home')->with('message', "Votre message a bien été envoyé et sera publié apres approbation");
         } else {
 
             return redirect('/home')->with('message', " Votre message a bien été envoyé et ne sera pas publié ");
@@ -154,12 +152,12 @@ echo $pieces[1]; // piece2
      */
     public function edit($id)
     {
-        $message=Message::find($id);
+        $message = Message::find($id);
 
-        if(auth()->user()->id !== $message->user_id){
-          return redirect('/')->with('error','Non autorisé');
+        if (auth()->user()->id !== $message->user_id) {
+            return redirect('/')->with('error', 'Non autorisé');
         }
-        return view ('/home')->with('message', $message);
+        return view('/home')->with('message', $message);
     }
 
     /**
@@ -199,11 +197,11 @@ echo $pieces[1]; // piece2
 
 
         $message = Message::find($id);
-       // $message->nom = auth()->user()->name;
+        // $message->nom = auth()->user()->name;
 
         $message->message = $request->input('message');
         $message->published = $request->input('published') ? true : false;
-       // $message->user_id = auth()->user()->id;
+        // $message->user_id = auth()->user()->id;
 
 
         //image upload///
@@ -221,10 +219,10 @@ echo $pieces[1]; // piece2
 
 
 
-      //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
+        //   session()->flash( 'message', " Votre message a bien été envoyé et publié !");
         if ($message->published == true) {
 
-            return redirect('/home')->with('message',"Votre message a bien été modifié et sera publié apres approbation");
+            return redirect('/home')->with('message', "Votre message a bien été modifié et sera publié apres approbation");
         } else {
 
             return redirect('/home')->with('message', " Votre message a bien été modifié et ne sera pas publié ");
@@ -247,11 +245,11 @@ echo $pieces[1]; // piece2
     public function destroy($id)
     {
 
-        $message= Message::find($id);
+        $message = Message::find($id);
         $message->delete();
-        if(auth()->user()->id !== $message->user_id){
-          return redirect('/')->with('error','Non autorisé');
+        if (auth()->user()->id !== $message->user_id) {
+            return redirect('/')->with('error', 'Non autorisé');
         }
-        return redirect('/') ->with('message', " Votre message a bien été supprimé ");
+        return redirect('/home')->with('message', " Votre message a bien été supprimé ");
     }
 }

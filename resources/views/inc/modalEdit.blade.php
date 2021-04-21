@@ -1,7 +1,10 @@
 <!-- Modal sendMessage -->
 @auth
     @foreach ($messages as $message)
-        <div id="modalEdit{{ $message->id }}" class="modal send2">
+
+
+
+        <div id="modalEdit{{ $message->id }}" class="modal send1">
             <div class="modal-content">
                 <p>
                 <div container>

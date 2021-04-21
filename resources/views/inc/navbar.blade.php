@@ -34,7 +34,7 @@
                 <li><a href="#modalApropos"class="pulse waves-effect waves-light"><i class="far fa-laugh k"></i>
                 </i></a></li>
 
-                <li><a href="/#projet" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
+                <li><a href="/#modalProjets" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
                             </i></a></li>
 
                 <li><a href="/#portfolio" class="pulse waves-effect waves-light"><i class="fas fa-book-reader k"></i></a></li>
@@ -146,10 +146,10 @@
                 <span
                 class="mobile">A propos</span></a></li>
 
-            <li><a href="/#projet" class="waves-effect waves-light">
+            <li><a href="/#modalProjets" class="waves-effect waves-light">
                       <span
                         class="mobile">Projets</span></a></li>
-            <li><a href="/#portfolio" class="waves-effect waves-light">
+            <li><a href="/#modalPortfolio" class="waves-effect waves-light">
                         <span
                         class="mobile">Portfolio</span></a></li>
 

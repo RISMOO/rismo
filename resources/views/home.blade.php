@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
 @include('inc.errorsuccess')
 @if (session()->has('message'))
-    <div class="card-content1 center-align" role="alert">
+    <div class="card-content1 center-align" id="confMessage"role="alert">
 
         {{ session()->get('message') }}
+        <a class="btn-floating  waves-effect waves-light black" id="confMessage1"><i class="material-icons ">add</i></a>
+
+            </button></a>
     </div>
 @endif
         <div class="container">
@@ -31,9 +35,9 @@
                @endif
                    <p class="white-text">Vous pouvez changer le theme ou la couleur de votre tableau de bord.</p>
                    <h6 class="couleur white-text">Couleurs</h6>
-                   <a class="btn-floating  waves-effect waves-light bleu"onclick = "changeColor('#0694fe');"><i class="material-icons bleu">add</i></a>
-                   <a class="btn-floating  waves-effect waves-light white"onclick = "changeColor('white');"><i class="material-icons white">add</i></a>
-                   <a class="btn-floating  waves-effect waves-light green"onclick = "changeColor('green');"><i class="material-icons green">add</i></a>
+                   <a class="btn-floating  waves-effect waves-light bleu" onclick = "changeColor('#0694fe');"><i class="material-icons bleu">add</i></a>
+                   <a class="btn-floating  waves-effect waves-light white" onclick = "changeColor('white');"><i class="material-icons white">add</i></a>
+                   <a class="btn-floating  waves-effect waves-light green" onclick = "changeColor('green');"><i class="material-icons green">add</i></a>
                    <h6 class="couleur white-text">Themes</h6>
                    <!--
                    <a class="btn waves-effect waves-light btn-small" onclick = "changeImage();">Montagne</a>
@@ -74,7 +78,7 @@
                 <div class="col s12">
                 @if (!count($messages) == 0)
 
-                    <table class="striped">
+                    <table class="centered highlight z-depth-4">
                         <thead>
                             <tr>
                                 <th>Messages</th>
@@ -90,12 +94,12 @@
                                         {{ Carbon\Carbon::parse($message->created_at)->format('d/m/Y à H:i') }}
 
                                     </td>
-                                    <td>
+                                    <td class="respon">
                                         <a class="btn waves-effect waves-light btn-small" href="#modalEdit{{ $message->id }}"
                                            >EDITER
                                             </a>
                                     </td>
-                                    <td>
+                                    <td class="respon">
                                         {!! Form::open(['action' => ['IndexController@destroy', $message->id], 'method' =>
                                         'POST']) !!}
                                         {{ Form::hidden('_method', 'DELETE') }}
