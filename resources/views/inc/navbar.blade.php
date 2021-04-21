@@ -82,13 +82,14 @@
 
                     <!-- Dropdown Structure -->
                     <ul id='dropdown1' class='dropdown-content'>
-
+                        @if (Route::current()->uri() == '/')
                         <li><a href="/home"><span class="dashboard">Dashboard</span><i
                                     class="material-icons dashboard ">local_library</i></a></li>
+                                    @endif
+
                         <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();"><i
                                     class="material-icons logout">exit_to_app</i><span class="logout">Logout</span></a></li>
-
                     </ul>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -98,7 +99,7 @@
             @endguest
 
         </div>
-        <ul class="side-nav z-depth-5 darken-4  " id="mobile-menu">
+        <ul class="side-nav z-depth-5 darken-4 " id="mobile-menu">
             <!--navigation a droite et on la ccxhe pour les petit s ecrans-->
             <!--MENU NAV POUR MOBILE-->
 

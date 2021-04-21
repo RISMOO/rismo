@@ -1,5 +1,7 @@
 <?php
 
+
+
 if (isset($_GET['accepte-cookie'])) {
 setcookie('accepte-cookie', 'true', time() + 365 * 24 * 3600);
 header('Location:./');
@@ -72,8 +74,20 @@ header('Location:./');
     <title>{{ config('app.name', 'rismo') }}</title>
 </head>
 
-
-
+<body onload="window.location.href = '#openModal';">
+    <div id="openModal" class="modalDialog text-center shadow">
+      <div class="center-align">
+<a href="/">
+        <img src="{{asset('img/Sale.webp')}}" alt="restaurants coqinn" width="90" height="90" class="mt-2 mb-2 text-center" /></a>
+        <hr />
+        <h2 class="center-align white-text tit">
+          BIENVENUE SUR MON PORTFOLIO
+        </h2>
+        <hr />
+        <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
+      </div>
+    </div>
+<!--
 
     <body id="open">
         <div id="openModal" class="modalDialog text-center shadow">
@@ -90,7 +104,7 @@ header('Location:./');
             <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
           </div>
         </div>
-
+    -->
 
     <div id="app">
 

@@ -7,12 +7,6 @@
     header('Location:./');
     } ?>
 
-    <?php if (isset($_GET['accepte-cookie'])) {
-    setcookie('accepte-cookie', 'true', time() + 365 * 24 * 3600);
-    header('Location:./');
-    } ?>#
-
-
 
     <section class="parallax-container center valign-wrapper z-depth-3 darken-4 ">
         <div class="container">
@@ -45,7 +39,7 @@
                 <a href="#modalProjets"><i class="fas fa-laptop-code fa-9x" id="diplome"></i></a>
             </div>
             <!-- Modal Projets -->
-            <div id="modalProjets" class="modal ">
+            <div id="modalProjets" class="modal">
                 <div class="modal-content">
                     @foreach ($projets as $projet)
                         <div class="col s12 m7">

@@ -22,8 +22,8 @@ function changeColor(color) {
     document.body.style.background = color;
 }
 
-function changeImage() {
-    document.body.style.backgroundImage ='url("https://images.unsplash.com/photo-1482192505345-5655af888cc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80")';
+function changeImage(url) {
+    document.body.style.backgroundImage =url;
     document.body.style.backgroundRepeat = "no-repeat";
     document.body.style.backgroundAttachment = "fixed";
     document.body.style.backgroundSize = "cover";
@@ -68,13 +68,14 @@ function changeImage4() {
 $(document).ready(function() {
     $("#check1").change(function() {
       if($(this).is(":checked")) {
-        changeImage();
+
+        changeImage("url('https://images.unsplash.com/photo-1482192505345-5655af888cc4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80')");
         document.getElementById("check2").checked = false;
         document.getElementById("check3").checked = false;
 
       }
       else{
-       changeImage4();
+      changeImage("url('img/reu.webp')");
        /*
        document.getElementById("check2").disabled = false;
        document.getElementById("check3").disabled = false;
@@ -86,12 +87,12 @@ $(document).ready(function() {
   $(document).ready(function() {
     $("#check2").change(function() {
       if($(this).is(":checked")) {
-        changeImage2();
+        changeImage("url('https://images.unsplash.com/photo-1593881135366-021cb95fd82d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80')");
         document.getElementById("check1").checked = false;
         document.getElementById("check3").checked = false;
       }
       else{
-       changeImage4();
+        changeImage("url('img/reu.webp')");
        /*
        document.getElementById("check2").disabled = false;
        document.getElementById("check3").disabled = false;
@@ -103,12 +104,12 @@ $(document).ready(function() {
   $(document).ready(function() {
     $("#check3").change(function() {
       if($(this).is(":checked")) {
-        changeImage3();
+        changeImage("url('https://images.pexels.com/photos/5613942/pexels-photo-5613942.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')");
         document.getElementById("check1").checked = false;
         document.getElementById("check2").checked = false;
       }
       else{
-       changeImage4();
+       changeImage("url('img/reu.webp')");
        /*
        document.getElementById("check2").disabled = false;
        document.getElementById("check3").disabled = false;
@@ -127,9 +128,8 @@ $(document).ready(function() {
 
 $(function() {
 
-
-    if(getCookie('modalAccepted') === 'true'){
-        $('#openModal').hide();
+    if(getCookie('modalAccepted') = 'true'){
+        console.log(getCookie('modalAccepted'));
     }
 });
 
@@ -138,7 +138,7 @@ $("#closeModal").on('click', function (){
     setCookie('modalAccepted', 'true', 3)
 });
 
-
+/*
 function setCookie(cname, cvalue, exdays) {
     if(getCookie('accepte-cookie') === "true") {
         var d = new Date();
@@ -165,7 +165,7 @@ function getCookie(cname) {
   }
 
 
-
+*/
 
 
 $('#search_button').on('click',function(){
