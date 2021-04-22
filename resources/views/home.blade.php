@@ -75,49 +75,44 @@
                 </div>
 
 
-                <div class="col s12">
+                <div class="col s12 ">
                 @if (!count($messages) == 0)
 
-                    <table class="centered highlight z-depth-4">
-                        <thead>
-                            <tr>
-                                <th>Messages</th>
-                                <th>Editer</th>
-                                <th>Supprimer</th>
-                            </tr>
-                        </thead>
-                         <tbody>
-                            <tr>
-                                @foreach ($messages as $message)
-                                    <td>{{ $message->message }}<br>
-                                        Posté le :
-                                        {{ Carbon\Carbon::parse($message->created_at)->format('d/m/Y à H:i') }}
+                <div class="card" id="cardMessage">
+                    <div class="card-content">
+                     <h5 class="center-align white-text"> VOS MESSAGES</h5>
+                     @foreach ($messages as $message)
+                    <div class="card-tabs">
 
-                                    </td>
-                                    <td class="respon">
-                                        <a class="btn waves-effect waves-light btn-small" href="#modalEdit{{ $message->id }}"
-                                           >EDITER
-                                            </a>
-                                    </td>
-                                    <td class="respon">
-                                        {!! Form::open(['action' => ['IndexController@destroy', $message->id], 'method' =>
-                                        'POST']) !!}
-                                        {{ Form::hidden('_method', 'DELETE') }}
-                                        {{ Form::button(
-                                               'Supprimer',
-                                                ['class' => 'btn btn-danger', 'type' => 'submit']
-                                            ) }}
-                                        {!! Form::close() !!}
-                                    </td>
-                                 </tr>
-                            @endforeach
-                            @endif
-                      </tbody>
-                    </table>
+
+                        <p class="center-align white-text "> Posté le :
+                            {{ Carbon\Carbon::parse($message->created_at)->format('d/m/Y à H:i') }}
+                        </p>
+
+                      </ul>
+                    </div>
+                    <div class="card-content grey lighten-4">
+                      <div id="test4" class="highlight">{{ $message->message }}</div>
+                    </div>
+                    <div class="flexbutton">
+                    <a class="btn waves-effect waves-light btn-small editerMessage" href="#modalEdit{{ $message->id }}"
+                        >EDITER
+                         </a>
+                         {!! Form::open(['action' => ['IndexController@destroy', $message->id], 'method' =>
+                         'POST']) !!}
+                         {{ Form::hidden('_method', 'DELETE') }}
+                         {{ Form::button(
+                                'Supprimer',
+                                 ['class' => 'btn btn-danger editerMessage', 'type' => 'submit']
+                             ) }}
+                         {!! Form::close() !!}
+
+                        </div>
+                    @endforeach
+                    @endif
+                  </div>
+                </div>
                 </div>
 
             </div>
-        </div>
-
-
                            @endsection

@@ -7,7 +7,7 @@
         <img src="{{ asset('img/avatar.png') }}" class="circle" width="100"
         alt="logo3">
 
-        <h4 class="white-text">A PROPOS DE MOI</h4>
+        <h4 class="white-text apropos">A PROPOS DE MOI</h4>
         <p class="white-text">
             Je m'appelle <strong>Maurice</strong>, j'ai 46ans, j'ai travaillé pendant 20 ans dans le
             transport.J'ai souhaité donné un tournant a ma carriere professionnel.<br>

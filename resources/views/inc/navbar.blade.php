@@ -33,17 +33,26 @@
 
                 <li><a href="#modalApropos"class="pulse waves-effect waves-light"><i class="far fa-laugh k"></i>
                 </i></a></li>
-
-                <li><a href="/#modalProjets" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
+                @if (Route::current()->uri() == '/')
+                <li><a href="#projet" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
                             </i></a></li>
+              @endif
 
+              @if (Route::current()->uri() == 'home')
+              <li><a href="/#projets" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
+                          </i></a></li>
+            @endif
+            @if (Route::current()->uri() == '/')
+                <li><a href="#portfolio" class="pulse waves-effect waves-light"><i class="fas fa-book-reader k"></i></a></li>
+             @endif
+             @if (Route::current()->uri() == 'home')
                 <li><a href="/#portfolio" class="pulse waves-effect waves-light"><i class="fas fa-book-reader k"></i></a></li>
-
+                @endif
                 <li><a href="/#messages" class="pulse waves-effect waves-light"><i
                             class="large material-icons">message</a></i></li>
 
                 @auth
-                    <li><a href="#modalSend" class="pulse waves-effect waves-light"><i
+                    <li><a href="#modalSendMessage" class="pulse waves-effect waves-light"><i
                                 class="large material-icons">edit</a></i></li>
                 @endauth
 
@@ -102,9 +111,10 @@
         <ul class="side-nav z-depth-5 darken-4 " id="mobile-menu">
             <!--navigation a droite et on la ccxhe pour les petit s ecrans-->
             <!--MENU NAV POUR MOBILE-->
-
-            <a href="/" class="center-align "> <img src="{{ asset('img/Sale.png') }}" class="responsive-img"
-                    alt="Contact Person" id="logo2"></p>
+            <li>
+             <a href="/">
+             <img src="{{ asset('img/Sale.png') }}" class=""
+                    alt="Contact Person" id="logo1"></a></li><br>
 
 
             <!-- Authentication Links MODALS-->
@@ -112,6 +122,7 @@
                 <li class="bold"><a href="#modalLogin1" class="waves-effect waves-light modal-trigger">
                           <span class="mobile">Login</span></a>
                     @if (Route::has('register'))
+                </li>
                         <!--MODAL LOGIN-->
                 <li class="bold"><a href="#modalRegister" class="waves-effect waves-light modal-trigger">
                            <span class="mobile">Register</span></a><hr>
@@ -120,16 +131,13 @@
                     @endif
                 @else
 
-                    <!-- Dropdown Trigger -->
-                    <h5 class="center-align bonjour">Bonjour
-                        {{ Auth::user()->name }}</h5>
-                <li class="divider"></li>
+
 
                 </li><!-- Dropdown Structure -->
                 <ul>
                     <li><a href="/home"><span
                                 class="mobile">Dashboard</span></a></li>
-                    <li><a href="#modalSend"><span
+                    <li><a href="#modalSendMessage"><span
                                 class="mobile">Ecrire un Message</span></a></li><br><hr>
 
                     <li><a href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -146,13 +154,28 @@
             <li><a href="/#modalApropos" class="waves-effect waves-light">
                 <span
                 class="mobile">A propos</span></a></li>
-
-            <li><a href="/#modalProjets" class="waves-effect waves-light">
+                @if (Route::current()->uri() == '/')
+            <li><a href="#projet" class="waves-effect waves-light">
                       <span
                         class="mobile">Projets</span></a></li>
-            <li><a href="/#modalPortfolio" class="waves-effect waves-light">
+                        @endif
+                        @if (Route::current()->uri() == 'home')
+                        <li><a href="/#projets" class="waves-effect waves-light">
+                                  <span
+                                    class="mobile">Projets</span></a></li>
+                                    @endif
+
+                        @if (Route::current()->uri() == '/')
+            <li><a href="#portfolio" class="waves-effect waves-light">
                         <span
                         class="mobile">Portfolio</span></a></li>
+                         @endif
+
+                        @if (Route::current()->uri() == 'home')
+                        <li><a href="/#portfolio" class="waves-effect waves-light">
+                                    <span
+                                    class="mobile">Portfolio</span></a></li>
+                                     @endif
 
             <li><a href="/#messages" class="waves-effect waves-light">
                     <span

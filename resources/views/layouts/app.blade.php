@@ -22,7 +22,7 @@ header('Location:./');
         content="Bienvenue sur mon portfolio, mes projets, mes formations et pas que.. " />
     <meta property="og:image" content="https://rismo.fr/img/reu.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/sale.png') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/Sale.webp') }}" />
 
     <!--Import Google Icon Font-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
@@ -73,7 +73,13 @@ header('Location:./');
     <!--Let browser know website is optimized for mobile-->
     <title>{{ config('app.name', 'rismo') }}</title>
 </head>
+<script>
+function OuvrirPopup(page, nom, option) {
+  window.open(page, nom, option);
+}
+    </script>
 
+<!--
 <body onload="window.location.href = '#openModal';">
     <div id="openModal" class="modalDialog text-center shadow">
       <div class="center-align">
@@ -87,7 +93,7 @@ header('Location:./');
         <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
       </div>
     </div>
-<!--
+
 
     <body id="open">
         <div id="openModal" class="modalDialog text-center shadow">

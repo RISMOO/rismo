@@ -7,22 +7,23 @@
     header('Location:./');
     } ?>
 
-
-    <section class="parallax-container center valign-wrapper z-depth-3 darken-4 ">
+    <section class="parallax-container center-align  z-depth-3 darken-4 ">
         <div class="container">
             <div class="row">
-                <div class="col s12 white-text center-align">
+                <div class="col s12 white-text">
 
                     <a class="z-depth modal-trigger tooltipped" data-position="bottom" data-delay="50"
                         data-tooltip="A propos de moi" href="#modalApropos"> <img src="{{ asset('img/Sale2.png') }}"
-                            alt="Contact Person" id="logo3">
+                            alt="Contact Person" id="logo3" >
                     </a>
+                    <h5 class="pexels" id="pexels2" style="display: none"> Photo by <a href="https://www.pexels.com/@junior-teixeira-1064069?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" class="jun" target="_blank"> Junior Teixeira</a> from <a href="https://www.pexels.com/fr-fr/" class="jun" target="_blank"> Pexels</a></h5>
+
                 </div>
             </div>
         </div>
         <div class="parallax hide-on-small-only " id="martin2">
             <object data="{{ asset('img/wel.svg ') }}" width="900" height="500"> </object>
-
+           
         </div>
     </section>
     @include('inc.errorsuccess')
@@ -36,11 +37,10 @@
         <div class="container">
             <h2 class="center-align">Projets</h2>
             <div class="diplome">
-                <a href="#modalProjets"><i class="fas fa-laptop-code fa-9x" id="diplome"></i></a>
+                <i class="fas fa-laptop-code fa-7x" id="diplome4"></i></a>
             </div>
             <!-- Modal Projets -->
-            <div id="modalProjets" class="modal">
-                <div class="modal-content">
+              <div id="sectionProjets"style="display:none">
                     @foreach ($projets as $projet)
                         <div class="col s12 m7">
                             <div class="card">
@@ -57,17 +57,12 @@
                             </div>
                         </div>
                     @endforeach
+                    <div class="modal-footer">
+                        <a href="/#projet" class="modal-close waves-effect waves-green btn-flat">Remonter</a>
+                    </div>
                   </div>
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Quitter</a>
-                </div>
             </div>
-
-
-
-
     </section>
-
     <section class="parallax-container center valign-wrapper z-depth-5 darken-4 hide-on-small-only" id="martin">
         <div class="parallax">
 
@@ -79,12 +74,10 @@
         <div class="container">
             <h2 class="center-align">Portfolio</h2>
             <div class="diplome">
-                <a href="#modalCompetences"><i class="fas fa-book-reader fa-9x" id="diplome"></i></a>
+                <i class="fas fa-book-reader fa-7x" id="diplome3"></i></a>
             </div>
+  <div id="sectionPortfolio"style="display:none">
 
-            <!-- Modal Competences -->
-            <div id="modalCompetences" class="modal">
-                <div class="modal-content">
                     <div class="card">
                         <div class="card-image z-depth-5 darken-4  " id="port">
                             <img src="{{ asset('img/exp.png') }}" id="competence" class="imag responsive-img">
@@ -125,7 +118,6 @@
                             </p>
 
                         </div>
-
                         <div class="card">
                             <div class="card-image z-depth-5 darken-4  " id="port">
                                 <img src="{{ asset('img/formations.png') }}" id="formation" class="imag responsive-img">
@@ -143,7 +135,6 @@
                                                     <a href="{{ $titre->image }}" target="_blank"
                                                         class="responsive-img"><img src="{{ $titre->image }}"
                                                             class="z-depth-5 responsive-img"></a>
-
                                                 </div>
                                                 <div class="card-content center-align">
                                                     <p>{{ $titre->description }}
@@ -153,20 +144,17 @@
                                             </div>
                                         </div>
                                     @endforeach
-
                                 </div>
                                 </p>
                             </div>
                         </div>
                     </div>
+                    <div class="modal-footer">
+                        <a href="/#portfolio" class="modal-close waves-effect waves-green btn-flat">Remonter</a>
+                    </div>
                 </div>
 
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Quitter</a>
-                </div>
-            </div>
     </section>
-
 
 
     <section class="parallax-container center valign-wrapper z-depth-5 darken-4 hide-on-small-only" id="martin1">
@@ -179,12 +167,16 @@
             <div class="text-center">
 
                 <h2 class="center-align">Vos messages</h2>
+                <div class="diplome">
+                    <i class="fas fa-comment-dots fa-7x" id="diplome1"></i>
+                </div>
+               <div id="vosMessages" style="display: none">
                 <div class="face2">
                     <div class="fb-like " data-href="https://rismo.fr" data-width="" data-layout="box_count"
                         data-action="like" data-size="small" data-share="true"></div>
 
                 </div>
-            </div>
+
             <p class="center-align">Ici vous trouverez vos messages publiés
             </p>
             <div class="row">
@@ -264,6 +256,7 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
         <div id="infobulle"></div>
     </section>
@@ -273,8 +266,8 @@
             <div class="row">
                 <div class="center-align marg">
                     <div class="col m8 offset-m2 s12">
-                        <h2 class="center-align">Reseau social </h2>
-                        <h5 class="center-align">Création, gestion et animation d'une page facebook</h5>
+                        <h2 class="center-align" id="reseausocial1">Reseau social </h2>
+                        <h5 class="center-align" id="reseausocial2">Création, gestion et animation d'une page facebook</h5>
 
                         <div class="row">
                             <div class="col m10 offset-m1 s12">
@@ -299,6 +292,10 @@
             <div class="row">
                 <div class="col m10 offset-m1 s12">
                     <h2 class="center-align">Contact </h2>
+                    <div class="diplome">
+                        <i class="fas fa-id-card-alt fa-7x" id="diplome2"></i>
+                    </div>
+                   <div id="sectionContact" style="display: none">
                     <p class="right"><span class="red-text">*</span> champs obligatoires</p>
                     <div class="row">
                         <form class="col s12" action="/contact" method="POST">
@@ -356,6 +353,7 @@
                         </form>
                     </div>
                 </div>
+             </div>
             </div>
         </div>
 
@@ -389,7 +387,7 @@
                             </script>rismo.fr&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/RISMOO/RISMOO"><i
                                     class="fab fa-github fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a
                                 href="mailto:rismodevops@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
-                        </p><a href="/#"><img src="{{ asset('img/Sale.png') }}" alt="Contact Person" id="logo3"
+                        </p><a href="/#"><img src="{{ asset('img/Sale.png') }}" alt="Contact Person" id="logo1"
                                 class="sale"></a>
                         <a href="{{ asset('img/cgu.pdf') }}" class="">
 
