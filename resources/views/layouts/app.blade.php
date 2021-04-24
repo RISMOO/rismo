@@ -73,11 +73,6 @@ header('Location:./');
     <!--Let browser know website is optimized for mobile-->
     <title>{{ config('app.name', 'rismo') }}</title>
 </head>
-<script>
-function OuvrirPopup(page, nom, option) {
-  window.open(page, nom, option);
-}
-    </script>
 
 <!--
 <body onload="window.location.href = '#openModal';">
@@ -93,24 +88,26 @@ function OuvrirPopup(page, nom, option) {
         <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
       </div>
     </div>
-
+-->
 
     <body id="open">
         <div id="openModal" class="modalDialog text-center shadow">
           <div class="center-align">
          <a href="/">
-            <img src="{{asset('img/Sale.png')}}" alt="restaurants coqinn" width="90" height="90" class="mt-2 mb-2 text-center" /></a>
+            <img src="{{asset('img/Sale.png')}}" alt="portfolio" width="90" height="90" class="mt-2 mb-2 text-center" /></a>
             <hr />
             <h2 class="center-align white-text tit">
-              BIENVENUE SUR MON PORTFOLIO
+              BIENVENUE SUR MON PORTFOLIO<br>
+            
             </h2>
             <hr />
 
 
             <button id="closeModal" class="btn btn-danger shadow">DECOUVRIR</button>
+
           </div>
         </div>
-    -->
+
 
     <div id="app">
 

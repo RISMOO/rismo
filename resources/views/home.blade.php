@@ -23,12 +23,12 @@
                    @if (count($messages) >= 1)
                   <p class="white-text"> Vous avez écrits &nbsp;<strong
                        class="text-primary">{{ count($messages) }}</strong>&nbsp;&nbsp;message{{ count($messages) > 1 ? 's' : '' }}&nbsp;<br></p>
-                       <a class="btn waves-effect waves-light btn-small" href="#modalSendMessage">
+                       <a class="btn waves-effect waves-light" id="messageHome" href="#modalSendMessage">
                         Ecrire un message</a>
                @else
                      <p class="white-text">  Nous sommes le:<span class=""> {{ $date }}</span></p>
                       <p  class="white-text"> Vous n'avez aucuns messages.</p><br>
-                       <a class="btn waves-effect waves-light btn-small" href="#modalSendMessage">
+                       <a class="btn waves-effect waves-light " href="#modalSendMessage">
                         Ecrire un message</a>
 
                        <br><br>
@@ -39,11 +39,7 @@
                    <a class="btn-floating  waves-effect waves-light white" onclick = "changeColor('white');"><i class="material-icons white">add</i></a>
                    <a class="btn-floating  waves-effect waves-light green" onclick = "changeColor('green');"><i class="material-icons green">add</i></a>
                    <h6 class="couleur white-text">Themes</h6>
-                   <!--
-                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage();">Montagne</a>
-                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage2();">Nature</a>
-                   <a class="btn waves-effect waves-light btn-small" onclick = "changeImage3();">Ville</a>
-                   -->
+
                      <div class="check">
                    <div class="switch">
                     <label>
@@ -74,7 +70,6 @@
                     </div>
                 </div>
 
-
                 <div class="col s12 ">
                 @if (!count($messages) == 0)
 
@@ -83,8 +78,6 @@
                      <h5 class="center-align white-text"> VOS MESSAGES</h5>
                      @foreach ($messages as $message)
                     <div class="card-tabs">
-
-
                         <p class="center-align white-text "> Posté le :
                             {{ Carbon\Carbon::parse($message->created_at)->format('d/m/Y à H:i') }}
                         </p>
@@ -113,6 +106,5 @@
                   </div>
                 </div>
                 </div>
-
             </div>
-                           @endsection
+         @endsection

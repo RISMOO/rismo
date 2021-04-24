@@ -2,66 +2,66 @@
 
 @section('content')
 
-    <?php if (isset($_GET['accepte-cookie'])) {
-    setcookie('accepte-cookie', 'true', time() + 365 * 24 * 3600);
-    header('Location:./');
-    } ?>
-
     <section class="parallax-container center-align  z-depth-3 darken-4 ">
         <div class="container">
             <div class="row">
                 <div class="col s12 white-text">
+                    @include('inc.errorsuccess')
+                    @if (session()->has('message'))
+                    <div class="card-content1 center-align" id="confMessage"role="alert">
+
+                        {{ session()->get('message') }}
+                        <a class="btn-floating  waves-effect waves-light black" id="confMessage1"><i class="material-icons ">add</i></a>
+
+                     </button></a>
+                    </div>
+                @endif
 
                     <a class="z-depth modal-trigger tooltipped" data-position="bottom" data-delay="50"
                         data-tooltip="A propos de moi" href="#modalApropos"> <img src="{{ asset('img/Sale2.png') }}"
                             alt="Contact Person" id="logo3" >
                     </a>
-                    <h5 class="pexels" id="pexels2" style="display: none"> Photo by <a href="https://www.pexels.com/@junior-teixeira-1064069?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" class="jun" target="_blank"> Junior Teixeira</a> from <a href="https://www.pexels.com/fr-fr/" class="jun" target="_blank"> Pexels</a></h5>
-
                 </div>
             </div>
         </div>
         <div class="parallax hide-on-small-only " id="martin2">
             <object data="{{ asset('img/wel.svg ') }}" width="900" height="500"> </object>
-           
+
         </div>
     </section>
-    @include('inc.errorsuccess')
-    @if (session()->has('message'))
-        <div class="card-content1 center-align" role="alert">
 
-            {{ session()->get('message') }}
-        </div>
-    @endif
+
     <section class="white center-align darken-4 section scrollspy" id="projet">
         <div class="container">
             <h2 class="center-align">Projets</h2>
             <div class="diplome">
-                <i class="fas fa-laptop-code fa-7x" id="diplome4"></i></a>
-            </div>
-            <!-- Modal Projets -->
+                <i class="fas fa-laptop-code fa-6x" id="diplome4"></i></a>
+             </div>
+
               <div id="sectionProjets"style="display:none">
-                    @foreach ($projets as $projet)
-                        <div class="col s12 m7">
-                            <div class="card">
+                <div class="row">
+                  <div class="col s12 m8 offset-m2">
+                       @foreach ($projets as $projet)
+
                                 <div class="card-image z-depth-5 ">
                                     <a href="{{ $projet->image }}" target="_blank" class="responsive-img"><img
-                                            src="{{ $projet->image }}" class="z-depth-5 responsive-img"></a>
+                                            src="{{ $projet->image }}" class="z-depth-5 responsive-img" loading="lazy"></a>
                                 </div>
                                 <div class="card-content">
-                                    <p>{{ $projet->description }}</p>
+                                    <p class="black-text">{{ $projet->description }}</p>
                                     <a href="{{ $projet->lien }}">
-                                        <button class="btn waves-effect waves-light">Voir le projet
+                                        <button class="btn waves-effect waves-light" id="marginBottomButton">Voir le projet
                                         </button></a>
                                 </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    <div class="modal-footer">
-                        <a href="/#projet" class="modal-close waves-effect waves-green btn-flat">Remonter</a>
-                    </div>
+                        @endforeach
+                        <a href="#projet" class=" btn-floating right waves-effect waves-light login" id="projet2"><i class="far fa-times-circle"></i></a>
+
                   </div>
-            </div>
+
+                </div>
+
+           </div>
+        </div>
     </section>
     <section class="parallax-container center valign-wrapper z-depth-5 darken-4 hide-on-small-only" id="martin">
         <div class="parallax">
@@ -70,42 +70,42 @@
         </div>
     </section>
 
-    <section class="white center-align darken-4 section scrollspy" id="portfolio">
+    <section class="white center-align valign-wrapper darken-4 section scrollspy" id="portfolio">
         <div class="container">
             <h2 class="center-align">Portfolio</h2>
-            <div class="diplome">
-                <i class="fas fa-book-reader fa-7x" id="diplome3"></i></a>
-            </div>
-  <div id="sectionPortfolio"style="display:none">
-
-                    <div class="card">
-                        <div class="card-image z-depth-5 darken-4  " id="port">
-                            <img src="{{ asset('img/exp.png') }}" id="competence" class="imag responsive-img">
-                            <span class="card-title black-text for">COMPETENCES</span>
-                        </div>
+              <div class="diplome">
+                <i class="fas fa-book-reader fa-6x" id="diplome3"></i></a>
+              </div>
+             <div id="sectionPortfolio"style="display:none">
+                 <div class="row">
+                       <div class="col s12 m6 offset-m3">
+                          <div class="card" id="cardCompetence">
+                            <div class="card-image z-depth-5 darken-4  " id="port">
+                               <img src="{{ asset('img/exp.png') }}" id="competence" class="imag responsive-img">
+                                <span class="card-title black-text for">COMPETENCES</span>
+                          </div>
                         <div class="card-content">
-                            <p>
                             <div class="" id="competences" style="display:none;">
                                 @foreach ($competences as $competence)
-                                    <span class="compétences">{{ $competence->nom }}</span>
-                                    <div class="progress deep-orange-text ">
-                                        <div class="determinate deep-orange-text"
-                                            style="width:{{ $competence->pourcentage }}%">
+                                    <span class="compétences black-text">{{ $competence->nom }}</span>
+                                    <div class="">
+
+                                   <img src="{{ $competence->image }}"
+                                        class="z-depth-5 responsive-img" width="250" >
                                         </div>
-                                    </div>
                                 @endforeach
                             </div>
-                            </p>
                         </div>
-                    </div>
-                    <div class="card">
+                     </div>
+
+                     <div class="card">
                         <div class="card-image z-depth-5 darken-4  " id="port">
                             <img src="{{ asset('img/compe.png') }}" id="exp" class="imag responsive-img">
                             <span class="card-title black-text for">EXPERIENCES</span>
                         </div>
                         <div class="card-content">
                             <p>
-                            <div class="" id="expe" style="display:none;">
+                            <div class="black-text" id="expe" style="display:none;">
                                 @foreach ($experiences as $experience)
                                     {{ $experience->nom }}<br>
                                     {{ $experience->poste }}<br>
@@ -116,7 +116,6 @@
                                 @endforeach
                             </div>
                             </p>
-
                         </div>
                         <div class="card">
                             <div class="card-image z-depth-5 darken-4  " id="port">
@@ -128,34 +127,67 @@
                                 <div class="" id="formations" style="display:none;">
                                     @foreach ($titres as $titre)
 
-                                        <div class="col s12 m7">
-
-                                            <div class="card">
                                                 <div class="card-image">
                                                     <a href="{{ $titre->image }}" target="_blank"
                                                         class="responsive-img"><img src="{{ $titre->image }}"
-                                                            class="z-depth-5 responsive-img"></a>
+                                                            class="z-depth-5 responsive-img" loading="lazy"></a>
                                                 </div>
                                                 <div class="card-content center-align">
-                                                    <p>{{ $titre->description }}
+                                                    <p class="black-text">{{ $titre->description }}
                                                         {{ $titre->description2 }}
                                                     </p>
                                                 </div>
-                                            </div>
-                                        </div>
+
                                     @endforeach
                                 </div>
                                 </p>
                             </div>
-                        </div>
+
+                         </div>
+
+                         <div class="card">
+                            <div class="card-image z-depth-5 darken-4  " id="port">
+                                <img src="{{ asset('img/skills.webp') }}" id="soft" class="imag responsive-img">
+                                <span class="card-title black-text for">SOFTSKILLS</span>
+                            </div>
+                            <div class="card-content">
+                                <p>
+                                <div class="" id="softs" style="display:none;">
+                                    @foreach ($softskills as $softskill)
+                                      <h5 class="black-text">  {{ $softskill->nom }} </h5><br>
+
+
+                                        </p>
+                                    @endforeach
+                                </div>
+                                </p>
+                            </div>
+                            <div class="card">
+                                <div class="card-image z-depth-5 darken-4  " id="port">
+                                    <img src="{{ asset('img/courseapieds.webp') }}" id="hobbie" class="imag responsive-img">
+                                    <span class="card-title black-text for">HOBBIES</span>
+                                </div>
+                                <div class="card-content">
+                                    <p>
+                                    <div class="" id="hobbies" style="display:none;">
+                                        @foreach ($hobbies as $hobbie)
+                                          <h5 class="black-text">  {{ $hobbie->nom }} </h5><br>
+
+
+                                            </p>
+                                        @endforeach
+                                    </div>
+                                    </p>
+                                </div>
+
                     </div>
-                    <div class="modal-footer">
-                        <a href="/#portfolio" class="modal-close waves-effect waves-green btn-flat">Remonter</a>
-                    </div>
-                </div>
+                    <a href="#portfolio" class=" btn-floating right waves-effect waves-light login" id="portfolio2"><i class="far fa-times-circle"></i></a>
+                 </div>
+
+             </div>
+        </div>
 
     </section>
-
 
     <section class="parallax-container center valign-wrapper z-depth-5 darken-4 hide-on-small-only" id="martin1">
         <div class="parallax">
@@ -166,16 +198,15 @@
         <div class="container">
             <div class="text-center">
 
-                <h2 class="center-align">Vos messages</h2>
+                <h2 class="center-align">Messages</h2>
                 <div class="diplome">
-                    <i class="fas fa-comment-dots fa-7x" id="diplome1"></i>
+                    <i class="fas fa-comment-dots fa-6x" id="diplome1"></i>
                 </div>
                <div id="vosMessages" style="display: none">
                 <div class="face2">
                     <div class="fb-like " data-href="https://rismo.fr" data-width="" data-layout="box_count"
                         data-action="like" data-size="small" data-share="true"></div>
-
-                </div>
+                  </div>
 
             <p class="center-align">Ici vous trouverez vos messages publiés
             </p>
@@ -293,7 +324,7 @@
                 <div class="col m10 offset-m1 s12">
                     <h2 class="center-align">Contact </h2>
                     <div class="diplome">
-                        <i class="fas fa-id-card-alt fa-7x" id="diplome2"></i>
+                        <i class="fas fa-id-card-alt fa-6x" id="diplome2"></i>
                     </div>
                    <div id="sectionContact" style="display: none">
                     <p class="right"><span class="red-text">*</span> champs obligatoires</p>
@@ -304,7 +335,7 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">person</i>
                                     <input id="name" type="text"
-                                        class="validate deep-orange-text darken-2  @error('name') is-invalid @enderror"
+                                        class="validate black-text  @error('name') is-invalid @enderror"
                                         name="name" data-position="bottom" data-delay="50"
                                         data-tooltip="Merci d'entrer votre nom" required autocomplete="nom"
                                         value="{{ old('name') }}">
@@ -318,7 +349,7 @@
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">mail</i>
                                     <input id="email" type="email"
-                                        class="validate deep-orange-text darken-2  @error('email') is-invalid @enderror"
+                                        class="validate black-text @error('email') is-invalid @enderror"
                                         name="email" data-position="bottom" data-delay="50"
                                         data-tooltip="Merci d'entrer votre email" required autocomplete="mail"
                                         value="{{ old('email') }}">
@@ -331,7 +362,7 @@
                                 </div>
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">edit</i>
-                                    <textarea id="message" class="materialize-textarea"
+                                    <textarea id="message" class="materialize-textarea black-text"
                                         data-length="120  @error('message') is-invalid @enderror" name="message" required>{{ old('message') }}
                                                 </textarea>
                                     @error('message')
@@ -356,10 +387,7 @@
              </div>
             </div>
         </div>
-
     </section>
-
-
     <footer class="bg">
         <div class="container">
             <div class="row">
@@ -389,9 +417,10 @@
                                 href="mailto:rismodevops@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
                         </p><a href="/#"><img src="{{ asset('img/Sale.png') }}" alt="Contact Person" id="logo1"
                                 class="sale"></a>
-                        <a href="{{ asset('img/cgu.pdf') }}" class="">
 
-                            <h6 class="conditions">Conditions Générales d'Utilisation<h6>
+
+                            <p class="white-text fond">Fonds d'écran<br>By <a href="https://unsplash.com/@rev3n"class="jun">Michal Kulbalczyk</a> from <a href="https://unsplash.com/" class="jun" target="_blank">unsplash </a> and <a href="https://www.pexels.com/@junior-teixeira-1064069?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" class="jun" target="_blank"> Junior Teixeira</a> from <a href="https://www.pexels.com/fr-fr/" class="jun" target="_blank"> Pexels</a></p>
+                             <a href="{{ asset('img/cgu.pdf') }}" class="conditions">Conditions Générales d'Utilisation<h6></a>
 
                         </a>
                     </div>
@@ -400,7 +429,7 @@
         </div>
     </footer>
     </body>
-    </html>
+ </html>
 
 
 @endsection

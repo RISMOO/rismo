@@ -8,6 +8,8 @@ use App\Message;
 use App\Formation;
 use App\Competence;
 use App\Experience;
+use App\Hobbie;
+use App\Softskill;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -36,6 +38,8 @@ class IndexController extends Controller
         $projets = Projet::all();
         $titres = Titre::all();
         $messages = Message::all();
+        $softskills = Softskill::all();
+        $hobbies= Hobbie::all();
 
 
         return view('welcome')->with([
@@ -44,7 +48,9 @@ class IndexController extends Controller
             'formations' => $formations,
             'projets' => $projets,
             'titres' => $titres,
-            'messages' => $messages
+            'messages' => $messages,
+            'softskills'=> $softskills,
+            'hobbies'=> $hobbies
         ]);
     }
 

@@ -4,7 +4,7 @@
     <div class="center-align">
 
       <p class="center-align white-text">
-        <img src="{{ asset('img/avatar.png') }}" class="circle" width="100"
+        <img src="{{ asset('img/moi.webp') }}" class="circle z-depth-3" loading="lazy" width="100"
         alt="logo3">
 
         <h4 class="white-text apropos">A PROPOS DE MOI</h4>

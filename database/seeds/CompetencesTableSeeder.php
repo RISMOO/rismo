@@ -14,83 +14,83 @@ class CompetencesTableSeeder extends Seeder
     {
           App\Competence::create([
             'nom' => 'Html5',
-            'pourcentage' => '80'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Css3',
-            'pourcentage' => '70'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Php',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'Js',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'VisualStudioCode',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'GitHub',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'Laragon',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Docker',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'Laravel',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'Bootstrap',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Jquery',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'VueJs',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Angular',
-            'pourcentage' => '20'
+            'image' => 'img/avat2.webp'
 
         ]);
         App\Competence::create([
             'nom' => 'Materialize',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 
         App\Competence::create([
             'nom' => 'Ionic',
-            'pourcentage' => '50'
+            'image' => 'img/avat2.webp'
 
         ]);
 

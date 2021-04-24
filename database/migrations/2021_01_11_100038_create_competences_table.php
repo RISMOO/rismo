@@ -16,7 +16,7 @@ class CreateCompetencesTable extends Migration
         Schema::create('competences', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nom');
-            $table->integer('pourcentage');
+            $table->string('image');
             $table->timestamps();
         });
     }

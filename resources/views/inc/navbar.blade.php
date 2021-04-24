@@ -22,8 +22,8 @@
         <div class="nav-wrapper">
 
 
-                <a href="/" class="brand-logo pulse waves-effect waves-light"> <img src="{{ asset('img/Sale.png') }}"
-                        class="responsive-img image" alt="Contact Person" id="logo4" loading="lazy">
+                <a href="/" class="brand-logo"> <img src="{{ asset('img/Sale.png') }}"
+                        class="responsive-img image" alt="Contact Person" id="logo1" loading="lazy">
                 </a>
 
             <a href="#" data-activates="mobile-menu" data-target="responsive-menu" class="button-collapse">
@@ -115,6 +115,7 @@
              <a href="/">
              <img src="{{ asset('img/Sale.png') }}" class=""
                     alt="Contact Person" id="logo1"></a></li><br>
+
 
 
             <!-- Authentication Links MODALS-->
