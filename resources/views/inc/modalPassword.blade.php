@@ -7,7 +7,7 @@
         <div container>
             <div class="row">
                 <div class="center-align">
-                    <img src="{{ asset('img/logo.jpg') }}" class="z-depth-5 circle responsive-img" alt="Contact Person"
+                    <img src="{{ asset('img/Sale.webp') }}" class="z-depth-5 circle responsive-img" alt="Contact Person"
                         id="logo1" loading="lazy">
                 </div>
                 <h5 class="center-align send">

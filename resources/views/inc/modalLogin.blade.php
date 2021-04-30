@@ -3,7 +3,7 @@
     <div class="center-align">
 
             <p class="center-align white-text">
-              <img src="{{ asset('img/Sale.png') }}"width="100"
+              <img src="{{ asset('img/Sale.webp') }}"width="100"
               alt="logo3">
 
               <h4 class="white-text">LOGIN</h4>

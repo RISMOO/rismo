@@ -20,7 +20,7 @@ header('Location:./');
     <meta property="og:title" content="Mon Portfolio" />
     <meta property="og:description"
         content="Bienvenue sur mon portfolio, mes projets, mes formations et pas que.. " />
-    <meta property="og:image" content="https://rismo.fr/img/reu.png" />
+    <meta property="og:image" content="https://rismo.fr/img/bur.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/Sale.webp') }}" />
 
@@ -98,7 +98,7 @@ header('Location:./');
             <hr />
             <h2 class="center-align white-text tit">
               BIENVENUE SUR MON PORTFOLIO<br>
-            
+
             </h2>
             <hr />
 

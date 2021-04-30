@@ -31,7 +31,13 @@ class IndexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+
+
     {
+/*
+        return view('welcome1');
+        */
+
         $competences = Competence::all();
         $experiences = Experience::all();
         $formations = Formation::all();
@@ -52,6 +58,8 @@ class IndexController extends Controller
             'softskills'=> $softskills,
             'hobbies'=> $hobbies
         ]);
+
+        
     }
 
     /**

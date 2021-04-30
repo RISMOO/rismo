@@ -28,7 +28,7 @@
                @else
                      <p class="white-text">  Nous sommes le:<span class=""> {{ $date }}</span></p>
                       <p  class="white-text"> Vous n'avez aucuns messages.</p><br>
-                       <a class="btn waves-effect waves-light " href="#modalSendMessage">
+                       <a class="btn waves-effect waves-light " href="#modalSendMessage"id="ecrireUnMessage">
                         Ecrire un message</a>
 
                        <br><br>

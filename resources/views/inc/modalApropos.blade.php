@@ -5,11 +5,11 @@
 
       <p class="center-align white-text">
         <img src="{{ asset('img/moi.webp') }}" class="circle z-depth-3" loading="lazy" width="100"
-        alt="logo3">
+        alt="logo"id="moi">
 
         <h4 class="white-text apropos">A PROPOS DE MOI</h4>
         <p class="white-text">
-            Je m'appelle <strong>Maurice</strong>, j'ai 46ans, j'ai travaillé pendant 20 ans dans le
+            Je m'appelle <strong>Maurice</strong> et j'ai travaillé pendant 20 ans dans le
             transport.J'ai souhaité donné un tournant a ma carriere professionnel.<br>
             En effet toujours passionné par le monde du numérique et plus particulierement le Web j'ai
             suivi une formation de developpeur Web a<a
@@ -26,7 +26,7 @@
 
 
 
-      <a href="#close" class="btn btn-danger shadow login">FERMER</a>
+      <a href="#close" class="btn btn-danger shadow login" id="closeApropos">FERMER</a>
     </div>
   </div>
 

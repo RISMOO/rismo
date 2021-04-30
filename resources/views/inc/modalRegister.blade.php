@@ -2,7 +2,7 @@
 <div id="modalRegister" class="modalDialog text-center shadow">
     <div class="center-align">
       <p class="center-align white-text">
-        <img src="{{ asset('img/Sale.png') }}" width="100"
+        <img src="{{ asset('img/Sale.webp') }}" width="100"
         alt="logo3">
         <h4 class="white-text">REGISTER</h4>
         <form method="POST" action="{{ route('register') }}" class="col s12">

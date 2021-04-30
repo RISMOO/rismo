@@ -22,7 +22,7 @@
         <div class="nav-wrapper">
 
 
-                <a href="/" class="brand-logo"> <img src="{{ asset('img/Sale.png') }}"
+                <a href="/" class="brand-logo"> <img src="{{ asset('img/Sale.webp') }}"
                         class="responsive-img image" alt="Contact Person" id="logo1" loading="lazy">
                 </a>
 
@@ -34,12 +34,12 @@
                 <li><a href="#modalApropos"class="pulse waves-effect waves-light"><i class="far fa-laugh k"></i>
                 </i></a></li>
                 @if (Route::current()->uri() == '/')
-                <li><a href="#projet" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
+                <li><a href="#sectionProjets1" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
                             </i></a></li>
               @endif
 
               @if (Route::current()->uri() == 'home')
-              <li><a href="/#projets" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
+              <li><a href="/#sectionProjets1" class="pulse waves-effect waves-light"><i class="fas fa-laptop-code k "></i>
                           </i></a></li>
             @endif
             @if (Route::current()->uri() == '/')
@@ -111,10 +111,10 @@
         <ul class="side-nav z-depth-5 darken-4 " id="mobile-menu">
             <!--navigation a droite et on la ccxhe pour les petit s ecrans-->
             <!--MENU NAV POUR MOBILE-->
-            <li>
+            <span class="center-align">
              <a href="/">
-             <img src="{{ asset('img/Sale.png') }}" class=""
-                    alt="Contact Person" id="logo1"></a></li><br>
+             <img src="{{ asset('img/Sale.webp') }}" class="logomobile"
+                    alt="Contact Person" id="logo1"></a></span>
 
 
 
