@@ -96,7 +96,7 @@
       </article>
 
       <article class="col m4 s12 offset-m2 " id="article4">
-        <img src="{{ asset('img/softskills.webp') }}" class="imag responsive-img z-depth-2" id="softskills" >
+        <img src="{{ asset('img/softskills.webp') }}" class="imag responsive-img" id="softskills" >
         <div id="sectionSoftskills"style="display:none">
            <div class="col s12 m12">
               <div class="card">
@@ -113,7 +113,7 @@
        </div>
   </article>
   <article class="col m4 s12" id="article5">
-     <img src="{{ asset('img/hobbies.webp') }}"class=" responsive-img z-depth-2" id="hobbies" >
+     <img src="{{ asset('img/hobbies.webp') }}"class=" responsive-img" id="hobbies" >
       <div id="sectionHobbies"style="display:none">
        <div class="col s12 m12">
           <div class="card">
@@ -137,6 +137,7 @@
         <h4 class="center-align">  <img src="{{ asset('img/projets.webp') }}" class=" responsive-img" width="100" id="diplome4" ></h4>
            <article class="col s12 m6 offset-m3" id="article1" >
                <img src="{{ asset('img/liste-Projets.webp') }}" class="imag responsive-img z-depth-1" id="projets">
+               <div class="fb-like" data-href="https://rismo.fr" data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="true"></div>
 
                <div id="sectionProjets" class="center-align" style="display:none">
                   <div class="col s12 m12">
@@ -266,8 +267,10 @@
             <div class="row">
                 <div class="center-align marg">
                     <div class="col m8 offset-m2 s12">
-                        <h2 class="center-align black-text" id="reseausocial1">Reseau social </h2>
-                        <h5 class="center-align black-text" id="reseausocial2">Création, gestion et animation d'une page facebook</h5>
+                        <h2 class="center-align white-text" id="reseausocial1">Reseau social </h2>
+
+
+                        <h5 class="center-align white-text" id="reseausocial2">Création, gestion et animation d'une page facebook</h5>
 
                         <div class="row">
                             <div class="col m10 offset-m1 s12">
@@ -279,6 +282,7 @@
                                 </div>
                             </div>
                        </div>
+
                     </div>
                 </div>
               </div>
@@ -340,14 +344,15 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col m12 face">
+                                
                                     <p class="center-align linear-gradient">
                                         {!! Form::button(' Envoyer ', ['class' => 'waves-effect waves-light btn z-depth-4', 'value' => '', 'type' => 'submit']) !!}
 
                                     </p>
+
+
                                     <div class="face2">
-                                        <div class="fb-like " data-href="https://rismo.fr" data-width="" data-layout="box_count"
-                                            data-action="like" data-size="small" data-share="true"></div>
+
                                       </div>
                                 </div>
                             </div>
@@ -396,6 +401,9 @@
             </div>
         </div>
     </footer>
+
+  <!-- Messenger Plug-in Discussion Code -->
+
  </body>
  </html>
 

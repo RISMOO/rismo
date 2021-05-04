@@ -156,12 +156,12 @@
                 <span
                 class="mobile">A propos</span></a></li>
                 @if (Route::current()->uri() == '/')
-            <li><a href="#projet" class="waves-effect waves-light">
+            <li><a href="#sectionProjets1" class="waves-effect waves-light">
                       <span
                         class="mobile">Projets</span></a></li>
                         @endif
                         @if (Route::current()->uri() == 'home')
-                        <li><a href="/#projets" class="waves-effect waves-light">
+                        <li><a href="/#sectionProjets1" class="waves-effect waves-light">
                                   <span
                                     class="mobile">Projets</span></a></li>
                                     @endif
