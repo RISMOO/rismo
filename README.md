@@ -20,4 +20,4 @@
 
 ---
 ## Demo
-[![rismo.fr](./ressourcesMD/rismo_fr.webp)](https://rismo.fr)
+[![rismo.fr](./ressourcesMD/rismobody.webp)](https://rismo.fr)
