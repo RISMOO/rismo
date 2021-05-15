@@ -34,6 +34,7 @@ header('Location:./');
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('favicons/apple-touch-icon-76x76.png')}}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{asset('favicons/apple-touch-icon-114x114.png')}}">
     <link rel="apple-touch-icon" sizes="120x120" href="{{asset('favicons/apple-touch-icon-120x120.png')}}">
+
     <link rel="apple-touch-icon" sizes="144x144" href="{{asset('favicons/apple-touch-icon-144x144.png')}}">
     <meta name="msapplication-TileImage" content="{{asset('favicons/favicon-144.png')}}">
     <meta name="msapplication-TileColor" content="#FFFFFF">
@@ -55,6 +56,8 @@ header('Location:./');
 
 
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+
     <!--Let browser know website is optimized for mobile-->
     <title>{{ config('app.name', 'rismo') }}</title>
 </head>
@@ -100,30 +103,14 @@ header('Location:./');
         <div id="fb-root"></div>
 
 
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              xfbml            : true,
-              version          : 'v10.0'
-            });
-          };
-
-          (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));
-        </script>
-
+      
 
         <div class="fb-customerchat"
           attribution="biz_inbox"
           page_id="105343918379198">
         </div>
 
-   
+
 
 
 
@@ -137,11 +124,13 @@ header('Location:./');
             @include('inc.modalEdit')
             @include('inc.scripts')
             @include('inc.modalApropos')
+            @include('inc.modalNewsletter')
             @include('inc.modalPassword')
             @include('inc.modalRegister')
             @include('inc.modalLogin')
             @yield('javascripts')
-
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVMV4G8"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </main>
 
        </div>

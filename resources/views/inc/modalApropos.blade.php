@@ -4,7 +4,7 @@
     <div class="center-align">
 
       <p class="center-align white-text">
-        <img src="{{ asset('img/moi.webp') }}" class="circle z-depth-3" loading="lazy" width="100"
+        <img src="{{ asset('img/moi2.webp') }}" class="circle z-depth-3" loading="lazy" width="100"
         alt="logo"id="moi">
 
         <h4 class="white-text apropos">A PROPOS DE MOI</h4>
@@ -18,7 +18,7 @@
             cause crise sanitaire ) en autonomie complete, stage compris.A l'issue j'ai obtenu le titre
             de developpeur web et web mobile.Je m'autoforme en permanence.<br>Vous trouverez sur ce site
             mon portfolio, mes apprentissages, mes projets.Vos remarques seront les bienvenues en me
-            laissant un<a href="#message"><span class="vert"> Message </span></a>
+            laissant un<a href="#message"><span class="vert"> Message </span></a>Vous pouvez aussi suivre toutes mes actualités en vous abonnant ma newsletter <a href="#modalNewsletter"><span class="vert">Je m'abonne</span></a>
         </p>
 
       </p>

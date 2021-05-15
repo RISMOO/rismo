@@ -186,9 +186,9 @@
                         <img src="{{ asset('img/rismo.webp') }}"
                             class="circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100" height="100"
-                            alt="Contact Person" id="prof1" loading="lazy" >
+                            alt="avatar" id="prof1" loading="lazy" >
                         <h4>Rismo</h4>
-                        <p class="black-text">Developpeur Web Junior</p>
+                        <p class="black-text">Developpeur Web</p>
                         <hr class="second">
                         <p class="black-text" id="ris" style="display:none;">Bonjour et bienvenue<br>Laissez moi un
                             message.<br><br>
@@ -211,7 +211,7 @@
                         <img src="{{ asset('img/femme.webp') }}"
                             class="circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100" height="100"
-                            alt="Contact Person" id="prof2" loading="lazy">
+                            alt="avatar" id="prof2" loading="lazy">
                         <h4>Elodie</h4>
                         <p class="black-text">Intégratrice Web</p>
                         <hr class="second">
@@ -236,7 +236,7 @@
                         <img src="{{ asset('img/homme.webp') }}"
                             class="circle responsive-img momo pulse waves-effect waves-light tooltipped"
                             data-position="top" data-delay="50" data-tooltip="Voir le message" width="100" height="100"
-                            alt="Contact Person" id="prof3" loading="lazy">
+                            alt="avatar" id="prof3" loading="lazy">
                         <h4>Mickael</h4>
                         <p class="black-text">Web Designer Junior</p>
                         <hr class="second">
@@ -262,11 +262,13 @@
         <div id="infobulle"></div>
     </section>
 
+
     <section class="contact section scrollspy z-depth-4 darken-4 " id="facebook">
         <div class="container">
             <div class="row">
                 <div class="center-align marg">
                     <div class="col m8 offset-m2 s12">
+
                         <h2 class="center-align white-text" id="reseausocial1">Reseau social </h2>
 
 
@@ -344,15 +346,18 @@
                                 </div>
                             </div>
                             <div class="row">
-                                
+
                                     <p class="center-align linear-gradient">
                                         {!! Form::button(' Envoyer ', ['class' => 'waves-effect waves-light btn z-depth-4', 'value' => '', 'type' => 'submit']) !!}
 
-                                    </p>
+                                    </p><br>
 
 
-                                    <div class="face2">
-
+                                    <div class="">
+                                        <h5 class="center-align black-text">Tenez-vous informé de l'actualité en vous inscrivant à la newsletter</h5><br>
+                                        <a class="btn waves-effect waves-light z-depth-4 modal-trigger" href="#modalNewsletter" name="action" id="newsletter">
+                                             S'incrire a la newsletter
+                                        </a>
                                       </div>
                                 </div>
                             </div>
@@ -381,21 +386,26 @@
                     <?php } ?>
                     <div class="face2 ">
                         <p class="copy">
-                            <a href="https://www.facebook.com/virage360degres"><i
+                            <a href="https://www.facebook.com/rismodev"><i
                                     class="fab fa-facebook fa-2x linear-gradient"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                href="https://www.linkedin.com/in/%F0%9F%8C%9E-r-91700619b/"><i
+                                href="https://www.linkedin.com/in/ris-%E2%93%9C-91700619b/" target="_blank"><i
                                     class="fab fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp
-                           <a href="https://github.com/RISMOO/RISMOO"><i
+                           <a href="https://github.com/RISMOO/RISMOO" target="_blank"><i
                                     class="fab fa-github fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                href="mailto:rismodevops@gmail.com"><i class="far fa-envelope fa-2x"></i></a>
+                                href="mailto:rismodevops@gmail.com" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
                         </p><a href="/#"><img src="{{ asset('img/Sale.webp') }}" alt="Contact Person" id="logo1"
                                 class="sale"></a>
+                                <a href="{{asset('img/cgu.pdf')}}" class="cgu" target="_blank">Condition générale d'utilisation</a>
+                                <a href="{{asset('img/pol.pdf')}}" class="cgu" target="_blank">Politique de confidentialité</a>
                             <p class="white-text fond">
+
                                 &copy; <script>
                                 document.write(new Date().getFullYear())
 
-                            </script>&nbsp;rismo.fr&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/RISMOO/RISMOO"></a>
-                        </a>
+                            </script> &nbsp;rismo.fr&nbsp;&nbsp;&nbsp;&nbsp;<br>
+
+                            </p>
+
                     </div>
                 </div>
             </div>
