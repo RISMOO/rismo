@@ -8,7 +8,7 @@
         alt="logo"id="moi">
 
         <h4 class="white-text apropos">A PROPOS DE MOI</h4>
-        <p class="white-text">
+        <p class="white-text"><span class="type"></span>
             Je m'appelle <strong>Maurice</strong> et j'ai travaillé pendant 20 ans dans le
             transport.J'ai souhaité donné un tournant a ma carriere professionnel.<br>
             En effet toujours passionné par le monde du numérique et plus particulierement le Web j'ai

@@ -10,7 +10,7 @@
 
                     <div class="input-field col s12">
 
-                        <input id="name" type="text" class="form-control white-text @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                        <input id="name2" type="text" class="form-control white-text @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                         <label for="name">Entrez votre Nom <span class="red-text">*</span></label>
                         @error('name')
                             <span class="invalid-feedback" role="alert">
@@ -31,7 +31,7 @@
 
                     <div class="input-field col s12">
 
-                        <input id="email" type="email"
+                        <input id="email2" type="email"
                             class="form-control validate white-text  @error('email') is-invalid @enderror" name="email"
                             value="{{ old('email') }}" required autocomplete="email" autofocus>
                         <label for="email">Entrez votre email <span class="red-text">*</span></label>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="input-field col s12">
 
-                        <input id="password" type="password"
+                        <input id="password2" type="password"
                             class="form-control white-text validate @error('password') is-invalid @enderror" name="password"
                             required autocomplete="current-password">
                         @error('password')

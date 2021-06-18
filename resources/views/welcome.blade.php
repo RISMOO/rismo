@@ -4,12 +4,12 @@
     <section class="parallax-container center-align darken-4 ">
         <div class="container">
             <div class="row">
-                <div class="col s12 white-text">
+                <div class="col s12 white-text  ">
                     @include('inc.errorsuccess')
 
                     <a class="z-depth modal-trigger tooltipped" data-position="bottom" data-delay="50"
-                        data-tooltip="A propos de moi" href="#modalApropos"> <img src="{{ asset('img/Sale.webp') }}"
-                            alt="Contact Person" id="logo3" width="200" >
+                        data-tooltip="A propos de moi" href="#modalApropos" onclick="changeImageBody1()"> <img src="{{ asset('img/rismodev.webp') }}"
+                            alt="Contact Person" id="logo3" width="200" class="page-scroll">
                     </a>
                 </div>
             </div>
@@ -19,14 +19,15 @@
     <section class="center-align" id="portfolio">
         <div class="container">
            <div class="row">
+
               <h4 class="center-align">  <img src="{{ asset('img/portfolio.webp') }}" class="imag responsive-img" width="100" id="pen"></h4>
                <article class="col m4 s12" id="article1" >
-                   <img src="{{ asset('img/competences.webp') }}" class="responsive-img" id="diplome3">
+                   <img src="{{ asset('img/competences.webp') }}" class="responsive-img " id="diplome3">
 
                    <div id="sectionPortfolio"style="display:none">
 
                       <div class="col s12 m12">
-                         <div class="card">
+                         <div class="card ">
 
                              <div class="card-content"><p>
                                 <div class="black-text">
@@ -55,10 +56,13 @@
                             <p>
                             <div class="black-text">
                                 @foreach ($experiences as $experience)
-                                    {{ $experience->nom }}<br>
-                                    {{ $experience->poste }}<br>
-                                    {{ $experience->lieu }}<br>
-                                    {{ $experience->date }}
+                               <em class="red-text">  Ets : </em>  {{ $experience->nom }}<br>
+                               <em class="red-text">     Fonction : </em> {{ $experience->poste }}<br>
+                                <em class="red-text">    Adresse : </em> {{ $experience->lieu }}<br>
+                                    <em class="red-text">    Date :</em> {{ $experience->date }}<br>
+                                    @if($experience->link )
+                                    <em class="red-text">    Lien :</em>  <a href="{{ $experience->link }}">Lien vers le site</a>
+                                     @endif
                                     <hr>
                                     </p>
                                 @endforeach
@@ -68,7 +72,7 @@
              </div>
              </article>
             <article class="col m4 s12"id="article3">
-             <img src="{{ asset('img/formations.webp') }}"class="imag responsive-img" id="formation" >
+             <img src="{{ asset('img/formations.webp') }}"class="imag responsive-img " id="formation" >
              <div id="sectionFormation"style="display:none">
                <div class="col s12 m12">
                   <div class="card">
@@ -96,7 +100,7 @@
       </article>
 
       <article class="col m4 s12 offset-m2 " id="article4">
-        <img src="{{ asset('img/softskills.webp') }}" class="imag responsive-img" id="softskills" >
+        <img src="{{ asset('img/softskills.webp') }}" class="imag responsive-img wow animate__animated animate__slideInLeft " id="softskills" >
         <div id="sectionSoftskills"style="display:none">
            <div class="col s12 m12">
               <div class="card">
@@ -113,7 +117,7 @@
        </div>
   </article>
   <article class="col m4 s12" id="article5">
-     <img src="{{ asset('img/hobbies.webp') }}"class=" responsive-img" id="hobbies" >
+     <img src="{{ asset('img/hobbies.webp') }}"class="responsive-img wow animate__animated animate__slideInRight" id="hobbies" >
       <div id="sectionHobbies"style="display:none">
        <div class="col s12 m12">
           <div class="card">
@@ -134,9 +138,9 @@
 <section class="white center-align z-depth-3" id="sectionProjets1">
     <div class="container">
        <div class="row padding-perso">
-        <h4 class="center-align">  <img src="{{ asset('img/projets.webp') }}" class=" responsive-img" width="100" id="diplome4" ></h4>
+        <h4 class="center-align">  <img src="{{ asset('img/projets.webp') }}" class=" responsive-img " width="100" id="diplome4" ></h4>
            <article class="col s12 m6 offset-m3" id="article1" >
-               <img src="{{ asset('img/liste-Projets.webp') }}" class="imag responsive-img z-depth-1" id="projets">
+               <img src="{{ asset('img/liste-Projets.webp') }}" class="imag responsive-img z-depth-1 wow animate__animated animate__slideInUp " id="projets">
                <div class="fb-like" data-href="https://rismo.fr" data-width="" data-layout="box_count" data-action="like" data-size="small" data-share="true"></div>
 
                <div id="sectionProjets" class="center-align" style="display:none">
@@ -178,7 +182,8 @@
                 <div class="diplome">
                 </div>
                <div id="vosMessages">
-            <p class="center-align black-text">Ici vous trouverez vos messages publiés
+            <p class="center-align black-text"><span class="typed-word"></span>Ici vous trouverez vos messages publiés
+                <iframe src="https://discord.com/widget?id=847535754867769345&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
             </p>
             <div class="row">
                 <div class="col s12 m4">
@@ -266,24 +271,41 @@
     <section class="contact section scrollspy z-depth-4 darken-4 " id="facebook">
         <div class="container">
             <div class="row">
-                <div class="center-align marg">
+                <div class="center-align marg wow animate__animated animate__zoomInDown">
                     <div class="col m8 offset-m2 s12">
 
-                        <h2 class="center-align white-text" id="reseausocial1">Reseau social </h2>
+                        <h2 class="center-align white-text" id="reseausocial1">Réseaux sociaux </h2>
 
 
-                        <h5 class="center-align white-text" id="reseausocial2">Création, gestion et animation d'une page facebook</h5>
+                        <h5 class="center-align white-text" id="reseausocial2">Gestion et animation</h5>
 
-                        <div class="row">
-                            <div class="col m10 offset-m1 s12">
+                            <div class="col s12 m4">
                                 <div class="" id="virage">
                                     <a href="https://www.facebook.com/virage360degres" target="_blank"><img
-                                            src="{{ asset('img/virage.webp') }}" width="250" alt="virage360"
+                                            src="{{ asset('img/virage360.png') }}" width="250" alt="virage360"
                                             id="virage1"></a>
 
                                 </div>
                             </div>
-                       </div>
+                            <div class="col s12 m4">
+                                <div class="" id="">
+                                    <a href="https://www.facebook.com/rismodev" target="_blank"><img
+                                            src="{{ asset('img/rismodev.webp') }}" width="250" alt="rismo devops"
+                                            id="rismodev1"></a>
+
+                                </div>
+                            </div>
+
+                            <div class="col s12 m4">
+                                <div class="" id="">
+                                    <a href="https://www.facebook.com/BrestGoelopeurs" target="_blank"><img
+                                            src="{{ asset('img/brestgoeloppeurs.png') }}" width="250" alt="brest goéloppeurs"
+                                            id="goelo1"></a>
+
+                                </div>
+                            </div>
+
+
 
                     </div>
                 </div>
@@ -306,7 +328,7 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">person</i>
-                                    <input id="name" type="text"
+                                    <input id="name1" type="text"
                                         class="validate black-text  @error('name') is-invalid @enderror"
                                         name="name" data-position="bottom" data-delay="50"
                                         data-tooltip="Merci d'entrer votre nom" required autocomplete="nom"
@@ -320,7 +342,7 @@
                                 </div>
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">mail</i>
-                                    <input id="email" type="email"
+                                    <input id="email1" type="email"
                                         class="validate black-text @error('email') is-invalid @enderror"
                                         name="email" data-position="bottom" data-delay="50"
                                         data-tooltip="Merci d'entrer votre email" required autocomplete="mail"
@@ -334,7 +356,7 @@
                                 </div>
                                 <div class="input-field col s12">
                                     <i class="material-icons prefix">edit</i>
-                                    <textarea id="message" class="materialize-textarea black-text"
+                                    <textarea id="message1" class="materialize-textarea black-text"
                                         data-length="120  @error('message') is-invalid @enderror" name="message" required>{{ old('message') }}
                                                 </textarea>
                                     @error('message')
@@ -355,7 +377,7 @@
 
                                     <div class="">
                                         <h5 class="center-align black-text">Tenez-vous informé de l'actualité en vous inscrivant à la newsletter</h5><br>
-                                        <a class="btn waves-effect waves-light z-depth-4 modal-trigger" href="#modalNewsletter" name="action" id="newsletter">
+                                        <a class="btn waves-effect waves-light z-depth-4 modal-trigger wow animate__animated animate__zoomInDown" href="#modalNewsletter" name="action" id="newsletter">
                                              S'incrire a la newsletter
                                         </a>
                                       </div>
@@ -400,7 +422,7 @@
                             <p class="white-text fond">
 
                                 &copy; <script>
-                                document.write(new Date().getFullYear())
+                                document.write(new Date().getFullYear());
 
                             </script> &nbsp;rismo.fr&nbsp;&nbsp;&nbsp;&nbsp;<br>
 
@@ -412,7 +434,7 @@
         </div>
     </footer>
 
-  <!-- Messenger Plug-in Discussion Code -->
+
 
  </body>
  </html>

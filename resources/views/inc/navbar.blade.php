@@ -22,8 +22,8 @@
         <div class="nav-wrapper">
 
 
-                <a href="/" class="brand-logo"> <img src="{{ asset('img/Sale.webp') }}"
-                        class="responsive-img image" alt="Contact Person" id="logo1" loading="lazy">
+                <a href="/" class="brand-logo"> <img src="{{ asset('img/rismodev.png') }}"
+                        class="responsive-img image" alt="Contact Person" id="logo1"loading="lazy">
                 </a>
 
             <a href="#" data-activates="mobile-menu" data-target="responsive-menu" class="button-collapse">
@@ -113,7 +113,7 @@
             <!--MENU NAV POUR MOBILE-->
             <span class="center-align">
              <a href="/">
-             <img src="{{ asset('img/Sale.webp') }}" class="logomobile"
+             <img src="{{ asset('img/rismodev.png') }}" class="logomobile"
                     alt="Contact Person" id="logo1"></a></span>
 
 

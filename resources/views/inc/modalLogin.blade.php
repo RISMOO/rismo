@@ -69,7 +69,9 @@
                 </button>
 
                 <a href="#close" class="btn btn-danger shadow login">ANNULER</a>
-            </div>
+
+            </div><br>
+            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true"></div>
 
         </div>
     </div>

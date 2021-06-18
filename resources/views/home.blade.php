@@ -34,7 +34,7 @@
                        <br><br>
                @endif
                <div id="themes">
-                   <p class="white-text">Vous pouvez changer le theme ou la couleur de votre tableau de bord.</p>
+                   <p class="white-text">Vous pouvez changer le theme ou la couleur de votre tableau de bord.<span class="typed-word"></span></p>
                    <h6 class="couleur white-text">Couleurs</h6>
                    <a class="btn-floating  waves-effect waves-light bleu" onclick = "changeColor('#0694fe');"><i class="material-icons bleu">add</i></a>
                    <a class="btn-floating  waves-effect waves-light white" onclick = "changeColor('white');"><i class="material-icons white">add</i></a>

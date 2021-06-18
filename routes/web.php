@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 
     Route::get('contact','ContactController@create');
     Route::post('contact','ContactController@store');
+//MESSAGERIE
 
+   
     Auth::routes();
     Route::resource('index', 'IndexController');
     Route::patch('/','IndexController@store');
@@ -42,4 +44,14 @@ Route::group(['prefix' => 'momo'], function () {
 //BLOG
 Route::get('/blog', 'BlogController@index')->name('blog');
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+//messagerie
+Route::get('/rooms', 'RoomController@index')
+->middleware('auth')
+->name('rooms.index');
 
